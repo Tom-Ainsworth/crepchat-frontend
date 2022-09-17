@@ -19,9 +19,14 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
     - [Strategy Plane](#strategy-plane)
     - [Scope Plane](#scope-plane)
     - [Structure Plane](#structure-plane)
-      - [User Stories](#user-stories)
+  - [User Stories](#user-stories)
+    - [Profile](#profile)
+    - [Posts](#posts)
+    - [Comments](#comments)
+    - [Likes](#likes)
+    - [Followers](#followers)
+    - [Reviews](#reviews)
     - [Skeleton Plane](#skeleton-plane)
-      - [Site Flow](#site-flow)
       - [Wireframes](#wireframes)
     - [Surface Plane](#surface-plane)
       - [Colour Scheme](#colour-scheme)
@@ -40,55 +45,93 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
 ### Strategy Plane
 
 - Site Goal
+  The goal of this site and project is to create a social media platform specifially for trainers(aka creps/sneakers). Currently there are several blogs and review sites that do not allow users to post their own content, making it a lot less accessible for the average user. The sneaker community is extremely large, with collectors, resellers, hobbyists and athletes all taking an interst in sharing their favourite pairs. On Instagram alone, hashtags like '#sneakerhead' and '#sneakers' boasting a whopping 55+ million posts. Other more general tags such as '#wiwt' (what I'm wearing today) cover fashion more generally, but are often used to display trainers.
+
+  Rather than users having to sift through these more generic tags, I plan on making CrepChat all about creps! Users will be able to post, like, comment, follow rate posts with 'cop' or 'drop' buttons.
 
 - Target Audience
+  Users of all ages with an interst or passion for footwear.
 
 - Is there a need for this?
+  In short, yes. Unless you're using Instagram, or you're part of a private discord server which are usually paid for, and not solely about sneakers, it is difficult to find an open community to share what is becoming a very common passion. After researching other options, I was unable to find a similar site that is currently running. The closest I could find was a site named Sneakerplay, established in 2006, which is currently inactive.
 
 - Is the content relevant?
+  Again yes. With worldwide revenue exceeding $72 billion USD in 2022 [source - Statistica](https://www.statista.com/outlook/cmo/footwear/sneakers/worldwide), more and more people are purchasing trainers as a fashion accessory rather than just functional footwear. As mentioned above, the amount of people posting about their sneakers is well into the tens of millions.
 
 - Customer Needs:
-
-| Opportunity                                            | Importance | Viability/Feasibility |
-| ------------------------------------------------------ | ---------- | --------------------- |
-| Landing page with site overview                        | 5          | 5                     |
-| About Section                                          | 5          | 5                     |
-| Location Section                                       | 5          | 5                     |
-| Enquiries Section                                      | 5          | 4                     |
-| Lesson Info Section                                    | 5          | 5                     |
-| Availability Form to book a lesson                     | 4          | 3                     |
-| Google maps APIintegration to show studio location     | 3          | 2                     |
-| Song Transcriptions Section with downloadable material | 3          | 1                     |
-| Tips/resources                                         | 2          | 5                     |
-| Current Student reviews                                | 4          | 4                     |
-| New User submitted reviews                             | 3          | 3                     |
-| User log in                                            | 5          | 5                     |
-| Transcription requests                                 | 2          | 3                     |
-| Blog style lessons                                     | 2          | 5                     |
-| Video Lessons                                          | 2          | 2                     |
-| User profile                                           | 5          | 3                     |
-| ----------------------------------------               | ----       | ----                  |
-| Totals: 16                                             | 60         | 60                    |
-
-As the viability score matches the importance score, I should in theory be able to implement all of the above features. This may well change as I begin the work, due to distractions and unforseen difficulties. The scores above have been based on my own skill levels currently. I may have estimated incorrectly for some, therefore changing the time needed. Between sprints I will reassess each opportunity to see what is more feasable.
+  - Sharing their own content
+  - Talking to other users about common interests
+  - discovering new products and users.
 
 ### Scope Plane
 
 In order to manage the workload for each sprint, I have divided the above opportunities into three categories, depending on their overall importance to reaching a minimum viable product (MVP).
 
 - Must Have
-
+  - Account creation
+  - Profile page
+  - All posts feed
+  - Liked post feed
+  - Followed user feed
+  - User posts
+  - User comments
+  - User likes
+  - User followed
 - Should Have
-
+  - Infinite scroll
+  - Search by brand category - adidas/nike/new balance
 - Could Have
+  - Reviews page for individual products
+  - User permission levels, user/admin/reviewer etc
 
 ### Structure Plane
 
-#### User Stories
+## User Stories
+
+### Profile
+
+- As a user, I can create a profile, so that I can have a username and profile picture when logged in.
+- As a user, I can edit my profile, so that I can change my picture and other details when I want to.
+- As a user, I can view mine and other's profiles so I can see what people are up to, and vice versa.
+
+### Posts
+
+- As a user, I can create a post, to share my pictures with other users.
+- As a user, I can edit a post, so that I can change the details of a post I created.
+- As a user, I can delete a post, if I decide I don't want to share it any longer.
+- As a user, I can view all of my posts, so that I can see everything I've created in one place.
+- As a user, I can see the most liked posts, so that I can discover other users and what's popular.
+- As a visitor, I can see the most recent posts, so I can find out whether I like the site or not.
+
+### Comments
+
+- As a user, I can leave a comment on posts, so that I can talk to other users and share what I think of their posts.
+- As a user, I can edit my comment, so that if I make a mistake, I can fix it.
+- As a user, I can delete my comment, in case I decide that I don't want to comment any more.
+
+### Likes
+
+- As a user, I can like posts, so that I can quickly leave positive feedback on other's posts.
+- As a user, I can unlike a post, in case I change my mind or click it by accident.
+- As a user I can view the total likes on each of my posts when I click on them, to see how popular they are.
+
+### Followers
+
+- As a user, I can follow other users, so that I can see more of their content.
+- As a user, I can unfollow other users, so that I don't have to see their posts any more.
+- As a user, I can see a feed of only the users that I follow, so that I can filter the content that I enjoy the most.
+- As a user, I can see how many followers I have, and how many people I follow, so that I can see how my profile is growing and how many people I'm connected to.
+
+### Reviews
+
+- As an author, I can write a review, so that I can share my opinions on various products.
+- As an author, I can edit a review, to add new details or change any mistakes.
+- As an author, I can delete a review, so that the content no longer shows on the site.
+- As a user, I can see reviews, so that I can stay up to date on the latest details of the products that I like.
+- As a user, I can comment on a review, so that I can share my thoughts with the author.
+- As a user, I can like the review, so that the author knows I agree with them.
 
 ### Skeleton Plane
-
-#### Site Flow
 
 #### Wireframes
 
