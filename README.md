@@ -135,6 +135,11 @@ In order to manage the workload for each sprint, I have divided the above opport
 
 #### Wireframes
 
+All wireframes for small, medium and large displays can be within the [WIREFRAMES.md](docs/readme-content/WIREFRAMES.md) file. There will be slight variations to these in production, however as they are subtle changes, I did not think they warranted an individual wireframe. The changes are:
+
+- Navigation bar on all pages will only display 'login' and 'sign up' buttons, rather than the options present which are only for logged in users.
+- Post Page: If a post hasn't got any comments yet, a message will appear prompting the user to create the first one.
+
 ### Surface Plane
 
 #### Colour Scheme
