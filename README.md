@@ -124,9 +124,9 @@ In order to manage the workload for each sprint, I have divided the above opport
 
 ### Reviews
 
-- As an author, I can write a review, so that I can share my opinions on various products.
-- As an author, I can edit a review, to add new details or change any mistakes.
-- As an author, I can delete a review, so that the content no longer shows on the site.
+- As a reviewer, I can write a review, so that I can share my opinions on various products.
+- As a reviewer, I can edit a review, to add new details or change any mistakes.
+- As a reviewer, I can delete a review, so that the content no longer shows on the site.
 - As a user, I can see reviews, so that I can stay up to date on the latest details of the products that I like.
 - As a user, I can comment on a review, so that I can share my thoughts with the author.
 - As a user, I can like the review, so that the author knows I agree with them.
