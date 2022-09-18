@@ -144,9 +144,19 @@ All wireframes for small, medium and large displays can be within the [WIREFRAME
 
 #### Colour Scheme
 
+![Colour Scheme](docs/readme-content/images/colour-scheme.png)
+
+A lighter background with dark text will ensure the site has a large contrast to aid readability. Menu bars will also be a light background, with a subtle difference from the main site colour, but not enough to fully stand out. The purple shade will work well to give the site a more inviting tone on buttons and other accents, and also works with the dark text.
+
 #### Typography
 
+- Main text: Open Sans
+- Smaller text (comments/captions): Roboto
+  Both fonts are from the Sans Serif family, and work nicely together, they are similar enough to not detach the content, but have their own subtle differences in letters like 's' and 'g' that will make different components stand out when mixed with the colour scheme above.
+
 ## Agile Development Process
+
+With just shy of 2 weeks to complete the project, I will be covering the whole front end in a single sprint, and will use Github Projects to structure the workflow. I will prioritise the must have features, and then address any should/could haves if there is time for them.
 
 ## **Current Features**
 
