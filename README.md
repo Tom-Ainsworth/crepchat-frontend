@@ -201,3 +201,4 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
   - for the site colour scheme.
 - [Google Fonts](https://fonts.google.com/)
 - General References
+- [Favicon.io](https://favicon.io/)

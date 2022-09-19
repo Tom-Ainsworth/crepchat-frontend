@@ -1,10 +1,13 @@
-import Button from "react-bootstrap/Button";
+// External
+
+// Internal
 import "./App.css";
+import NavBar from "./components/NavBar";
 
 function App() {
     return (
         <div className="App">
-            <Button variety="primary">Primary</Button>
+            <NavBar />
         </div>
     );
 }
