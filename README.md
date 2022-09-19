@@ -146,7 +146,13 @@ All wireframes for small, medium and large displays can be within the [WIREFRAME
 
 ![Colour Scheme](docs/readme-content/images/colour-scheme.png)
 
-A lighter background with dark text will ensure the site has a large contrast to aid readability. Menu bars will also be a light background, with a subtle difference from the main site colour, but not enough to fully stand out. The purple shade will work well to give the site a more inviting tone on buttons and other accents, and also works with the dark text.
+- Black for the primary text colour
+- Battleship Grey for unchecked icons
+- F2 cultured for the Navbar background
+- EE cultured for the main background colour
+- White for form and card backgrounds
+- Medium Purple for buttons and selected icons
+- Ocean Blue for highlighted text
 
 #### Typography
 
