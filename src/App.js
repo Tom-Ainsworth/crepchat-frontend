@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 // Internal
 import styles from "./App.module.css";
 import NavBar from "./components/NavBar";
+import "./api/axiosDefaults";
 
 function App() {
     return (
