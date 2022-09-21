@@ -1,6 +1,7 @@
 // External
 import axios from "axios";
 
-axios.defaults.baseURL = "http://127.0.0.1:8000/";
+axios.defaults.baseURL = "https://crepchat-api.herokuapp.com/";
 axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
-// axios.defaults.withCredentials = true;
+// ! Uncomment this line when going to production!
+axios.defaults.withCredentials = true;
