@@ -11,7 +11,7 @@ import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 
 // Internal
-import styles from "../../styles/SignInUpForm.module.css";
+import styles from "../../../styles/SignUpLoginForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
