@@ -1,5 +1,5 @@
 // External
-import React, { useState } from "react";
+import { useState } from "react";
 import "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Form from "react-bootstrap/Form";
@@ -110,7 +110,7 @@ const SignUpForm = () => {
                         >
                             Sign Up
                         </Button>
-                        {errors.non_filed_errors?.map((message, idx) => (
+                        {errors.non_field_errors?.map((message, idx) => (
                             <Alert key={idx} variant="warning" className="mt-3">
                                 {message}
                             </Alert>

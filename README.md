@@ -185,11 +185,18 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - Javascript
 - [React](https://reactjs.org/)
   - Javascript library for building the component based UI
+- [ESLint](https://eslint.org/)
+  - Code analysis
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+  - Readme formatting
+- [Postman](https://www.postman.com/)
+  - Testing http requests
 
 ## Honourable Mentions
 
 - Spencer Barriball - My mentor throughout the project. Always able to answer any questions I have and is such a positive person to have around.
 - Ellie Pitkin - My partner who is always so understanding when I'm stuck in a rut or need to spend extra time to push through a problem. I couldn't ask for a more supportive person to have around me during this.
+- The Code Institute slack community for always being supportive and having an answer to my questions pretty much all the time!
 
 ## Credits
 
