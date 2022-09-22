@@ -1,5 +1,5 @@
 // External
-import React, { useState } from "react";
+import { useState } from "react";
 import "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Form from "react-bootstrap/Form";
