@@ -1,5 +1,5 @@
 // External
-import { StrictMode } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -9,11 +9,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-    <StrictMode>
+    <React.StrictMode>
         <Router>
             <App />
         </Router>
-    </StrictMode>,
+    </React.StrictMode>,
     document.getElementById("root")
 );
 
