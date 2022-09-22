@@ -12,17 +12,11 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": "latest",
+        "ecmaVersion": 11,
         "sourceType": "module"
     },
     "plugins": ["react"],
     "rules": {
-        "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off",
-        "no-unused-vars": [
-            "error",
-            { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-        ],
         "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }]
     }
 }
