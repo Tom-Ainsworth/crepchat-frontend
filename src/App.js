@@ -8,12 +8,19 @@ import NavBar from "./components/NavBar";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import LogInForm from "./pages/auth/LoginInForm";
+import { useCurrentUser } from "./context/CurrentUserContext";
 
 function App() {
+    const currentUser = useCurrentUser();
+
     return (
         <div className={styles.App}>
             <NavBar />
-            <Container className={styles.Main}>
+            <Container
+                className={
+                    currentUser ? styles.MainLoggedIn : styles.MainLoggedOut
+                }
+            >
                 <Switch>
                     <Route exact path="/" render={() => <h1>Home</h1>} />
                     <Route exact path="/login" render={() => <LogInForm />} />

@@ -4,7 +4,11 @@
     height: 100vh;
 }
 
-.Main {
+.MainLoggedIn {
+    padding-top: 124px;
+}
+
+.MainLoggedOut {
     padding-top: 81px;
 }
 
