@@ -5,11 +5,11 @@
 }
 
 .MainLoggedIn {
-    padding-top: 124px;
+    padding-top: 100px;
 }
 
 .MainLoggedOut {
-    padding-top: 81px;
+    padding-top: 75px;
 }
 
 .Content {
@@ -83,4 +83,10 @@ figure {
 }
 *::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+@media screen and (min-width: 992px) {
+    .MainLoggedIn {
+        padding-top: 76px;
+    }
 }

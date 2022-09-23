@@ -20,7 +20,7 @@ const NavBar = () => {
             className={styles.NavLink}
             activeClassName={styles.Active}
         >
-            <i className="fas fa-plus-square"></i> Create Post
+            <i className="fas fa-plus-square"></i> Create
         </NavLink>
     );
 
@@ -41,7 +41,7 @@ const NavBar = () => {
                 <i className="fas fa-heart"></i> Liked
             </NavLink>
             <NavLink to="/" className={styles.NavLink} onClick={() => {}}>
-                <i className="fas fa-sign-out-alt"></i> Log Out
+                <i className="fas fa-sign-out-alt"></i> Logout
             </NavLink>
             <NavLink
                 to={`/profiles/${currentUser?.profile_id}`}
@@ -76,16 +76,16 @@ const NavBar = () => {
 
     return (
         <Navbar className={styles.NavBar} expand="md" fixed="top">
-            <Container>
+            <Container className={styles.Container}>
                 <NavLink to="/">
                     <Navbar.Brand>
-                        <img src={logo} alt="logo" height="45" />
+                        <img src={logo} alt="logo" height="25" />
                     </Navbar.Brand>
                 </NavLink>
                 {currentUser && addPostIcon}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto text-left">
+                    <Nav className=" text-left">
                         <NavLink
                             exact
                             to="/"
