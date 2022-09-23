@@ -9,6 +9,7 @@ import logo from "../assets/logo.png";
 
 import styles from "../styles/NavBar.module.css";
 import { useCurrentUser } from "../context/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
@@ -19,7 +20,7 @@ const NavBar = () => {
             className={styles.NavLink}
             activeClassName={styles.Active}
         >
-            <i className="fas fa-plus+square"></i> Create Post
+            <i className="fas fa-plus-square"></i> Create Post
         </NavLink>
     );
 
@@ -46,7 +47,11 @@ const NavBar = () => {
                 to={`/profiles/${currentUser?.profile_id}`}
                 className={styles.NavLink}
             >
-                <img src={currentUser?.profile_image} />
+                <Avatar
+                    src={currentUser?.profile_image}
+                    height={40}
+                    text="Profile"
+                />
             </NavLink>
         </>
     );
