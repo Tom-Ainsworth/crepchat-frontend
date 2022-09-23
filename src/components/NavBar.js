@@ -3,17 +3,29 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 // Internal
 import logo from "../assets/logo.png";
-
 import styles from "../styles/NavBar.module.css";
-import { useCurrentUser } from "../context/CurrentUserContext";
+import {
+    useCurrentUser,
+    useSetCurrentUser,
+} from "../context/CurrentUserContext";
 import Avatar from "./Avatar";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
 
+    const handleLogout = async () => {
+        try {
+            await axios.post("dj-rest-auth/logout/");
+            setCurrentUser(null);
+        } catch (err) {
+            // console.log(err);
+        }
+    };
     const addPostIcon = (
         <NavLink
             to="/posts/create"
@@ -40,7 +52,7 @@ const NavBar = () => {
             >
                 <i className="fas fa-heart"></i> Liked
             </NavLink>
-            <NavLink to="/" className={styles.NavLink} onClick={() => {}}>
+            <NavLink to="/" className={styles.NavLink} onClick={handleLogout}>
                 <i className="fas fa-sign-out-alt"></i> Logout
             </NavLink>
             <NavLink
