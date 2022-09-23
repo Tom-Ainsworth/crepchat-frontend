@@ -1,5 +1,4 @@
 // External
-import { useEffect, useRef, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -14,24 +13,13 @@ import {
     useSetCurrentUser,
 } from "../context/CurrentUserContext";
 import Avatar from "./Avatar";
+import useClickOutside from "../hooks/useClickOutside";
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
-    const [expanded, setExpanded] = useState(false);
-    const ref = useRef(null);
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setExpanded(false);
-            }
-        };
-        document.addEventListener("mouseup", handleClickOutside);
-        return () => {
-            document.removeEventListener("mouseup", handleClickOutside);
-        };
-    }, [ref]);
+    const { expanded, setExpanded, ref } = useClickOutside();
 
     const handleLogout = async () => {
         try {
