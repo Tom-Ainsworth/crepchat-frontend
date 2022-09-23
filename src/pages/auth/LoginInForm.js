@@ -24,7 +24,7 @@ function LogInForm() {
 
     const [errors, setErrors] = useState({});
 
-    const history = useHistory;
+    const history = useHistory();
 
     const handleChange = (event) => {
         setLogInData({
@@ -37,7 +37,7 @@ function LogInForm() {
         event.preventDefault();
         try {
             await axios.post("/dj-rest-auth/login/", LogInData);
-            history.push("/login");
+            history.push("/");
         } catch (err) {
             setErrors(err.response?.data);
         }
