@@ -102,7 +102,7 @@ const Post = (props) => {
                     return post.id === id
                         ? {
                               ...post,
-                              dislikes_count: post.likes_count - 1,
+                              dislikes_count: post.dislikes_count - 1,
                               dislike_id: null,
                           }
                         : post;
