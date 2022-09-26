@@ -10,6 +10,7 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import LogInForm from "./pages/auth/LoginInForm";
 import { useCurrentUser } from "./context/CurrentUserContext";
 import PostCreateForm from "./pages/posts/PostCreateForm";
+import PostPage from "./pages/posts/PostPage";
 
 function App() {
     const currentUser = useCurrentUser();
@@ -30,6 +31,11 @@ function App() {
                         exact
                         path="/posts/create"
                         render={() => <PostCreateForm />}
+                    />
+                    <Route
+                        exact
+                        path="/posts/:id"
+                        render={() => <PostPage />}
                     />
                     <Route render={() => <p>Page not found!</p>} />
                 </Switch>
