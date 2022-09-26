@@ -33,7 +33,7 @@ const Post = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
 
-    const handleLike = async () => {
+    const handleAddLike = async () => {
         try {
             const { data } = await axiosRes.post("/likes/", { post: id });
             setPosts((prevPosts) => ({
@@ -49,7 +49,27 @@ const Post = (props) => {
                 }),
             }));
         } catch (err) {
-            console.log(err);
+            // console.log(err);
+        }
+    };
+
+    const handleRemoveLike = async () => {
+        try {
+            await axiosRes.delete(`/likes/${like_id}/`);
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? {
+                              ...post,
+                              likes_count: post.likes_count - 1,
+                              like_id: null,
+                          }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
         }
     };
 
@@ -88,11 +108,11 @@ const Post = (props) => {
                             <i className="fas fa-fire" />
                         </OverlayTrigger>
                     ) : like_id ? (
-                        <span onClick={() => {}}>
+                        <span onClick={handleRemoveLike}>
                             <i className={`fas fa-fire ${styles.Fire}`} />
                         </span>
                     ) : currentUser ? (
-                        <span onClick={handleLike}>
+                        <span onClick={handleAddLike}>
                             <i
                                 className={`fas fa-fire ${styles.FireOutline}`}
                             />
