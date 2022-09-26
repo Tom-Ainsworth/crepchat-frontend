@@ -191,15 +191,6 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
   - Readme formatting
 - [Postman](https://www.postman.com/)
   - Testing http requests
-
-## Honourable Mentions
-
-- Spencer Barriball - My mentor throughout the project. Always able to answer any questions I have and is such a positive person to have around.
-- Ellie Pitkin - My partner who is always so understanding when I'm stuck in a rut or need to spend extra time to push through a problem. I couldn't ask for a more supportive person to have around me during this.
-- The Code Institute slack community for always being supportive and having an answer to my questions pretty much all the time!
-
-## Credits
-
 - [Balsamiq](https://balsamiq.com/) for creating the wireframes
 - [VS Code](https://code.visualstudio.com/) for the text editor
 - [React Bootstrap](https://react-bootstrap.github.io/)
@@ -212,6 +203,21 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
   - Used for the site flow and ERD diagrams.
 - [Coolers](https://coolors.co)
   - for the site colour scheme.
+
+## Honourable Mentions
+
+- Spencer Barriball - My mentor throughout the project. Always able to answer any questions I have and is such a positive person to have around.
+- Ellie Pitkin - My partner who is always so understanding when I'm stuck in a rut or need to spend extra time to push through a problem. I couldn't ask for a more supportive person to have around me during this.
+- The Code Institute slack community for always being supportive and having an answer to my questions pretty much all the time!
+
+## Credits
+
+- [Code Institute](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwm8WZBhBUEiwA178UnL1yYZ4TCqpEYl__6IceaLdPrDDLtFgZQYygGXkvj5IS4fZ5dLji8BoCbnQQAvD_BwE)
+  - For the boilerplate code used and adapted from their Moments walkthrough tutorial
 - [Google Fonts](https://fonts.google.com/)
-- General References
+  - For the site fonts
 - [Favicon.io](https://favicon.io/)
+  - For the site favicon and manifest
+- [flaticon.com](https://www.flaticon.com/free-icon/upload_3097412?term=upload&page=1&position=1&page=1&position=1&related_id=3097412&origin=tag)
+  - For the upload image icon
+  -
