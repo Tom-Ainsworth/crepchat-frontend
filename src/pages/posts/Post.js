@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../context/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
     const {
@@ -26,10 +27,31 @@ const Post = (props) => {
         image,
         updated_at,
         postPage,
+        setPosts,
     } = props;
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+
+    const handleLike = async () => {
+        try {
+            const { data } = await axiosRes.post("/likes/", { post: id });
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? {
+                              ...post,
+                              likes_count: post.likes_count + 1,
+                              like_id: data.id,
+                          }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     return (
         <Card className={styles.Post}>
@@ -70,7 +92,7 @@ const Post = (props) => {
                             <i className={`fas fa-fire ${styles.Fire}`} />
                         </span>
                     ) : currentUser ? (
-                        <span onClick={() => {}}>
+                        <span onClick={handleLike}>
                             <i
                                 className={`fas fa-fire ${styles.FireOutline}`}
                             />
