@@ -1,11 +1,13 @@
 // External
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
+import Alert from "react-bootstrap/Alert";
+import { useHistory } from "react-router-dom";
 
 // Internal
 import Upload from "../../assets/upload.png";
@@ -13,6 +15,7 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
+import { axiosReq } from "../../api/axiosDefaults";
 
 function PostCreateForm() {
     const [postData, setPostData] = useState({
@@ -22,7 +25,11 @@ function PostCreateForm() {
     });
 
     const { caption, category, image } = postData;
-    // const [errors, setErrors] = useState({});
+
+    const imageInput = useRef(null);
+    const history = useHistory();
+
+    const [errors, setErrors] = useState({});
 
     const handleChange = (event) => {
         setPostData({
@@ -38,6 +45,25 @@ function PostCreateForm() {
                 ...postData,
                 image: URL.createObjectURL(event.target.files[0]),
             });
+        }
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData();
+
+        formData.append("caption", caption);
+        formData.append("category", category);
+        formData.append("image", imageInput.current.files[0]);
+
+        try {
+            const { data } = await axiosReq.post("/posts/", formData);
+            history.push(`/posts/${data.id}`);
+        } catch (err) {
+            // console.log(err);
+            if (err.response?.status !== 401) {
+                setErrors(err.response?.data);
+            }
         }
     };
 
@@ -58,6 +84,7 @@ function PostCreateForm() {
 
             <Form.Group controlId="exampleForm.ControlSelect2">
                 <Form.Label>Category</Form.Label>
+
                 <Form.Control
                     as="select"
                     name="category"
@@ -66,15 +93,22 @@ function PostCreateForm() {
                     onChange={handleChange}
                     aria-label="category"
                 >
+                    <option>Select a Category</option>
                     <option>Adidas</option>
                     <option>New Balance</option>
                     <option>Nike</option>
                 </Form.Control>
             </Form.Group>
 
+            {errors.category?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                    {message}
+                </Alert>
+            ))}
+
             <Button
                 className={`${btnStyles.Button} ${btnStyles.Purple} btn`}
-                onClick={() => {}}
+                onClick={() => history.goBack()}
             >
                 cancel
             </Button>
@@ -88,7 +122,7 @@ function PostCreateForm() {
     );
 
     return (
-        <Form>
+        <Form onSubmit={handleSubmit}>
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                     <Container
@@ -129,8 +163,16 @@ function PostCreateForm() {
                                 id="image-upload"
                                 accept="image/*"
                                 onChange={handleChangeImage}
+                                ref={imageInput}
                             />
+
+                            {errors.image?.map((message, idx) => (
+                                <Alert variant="warning" key={idx}>
+                                    {message}
+                                </Alert>
+                            ))}
                         </Form.Group>
+
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
