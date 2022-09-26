@@ -73,6 +73,46 @@ const Post = (props) => {
         }
     };
 
+    const handleAddDisLike = async () => {
+        try {
+            const { data } = await axiosRes.post("/dislikes/", { post: id });
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? {
+                              ...post,
+                              dislikes_count: post.dislikes_count + 1,
+                              dislike_id: data.id,
+                          }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
+        }
+    };
+
+    const handleRemoveDisLike = async () => {
+        try {
+            await axiosRes.delete(`/dislikes/${dislike_id}/`);
+            setPosts((prevPosts) => ({
+                ...prevPosts,
+                results: prevPosts.results.map((post) => {
+                    return post.id === id
+                        ? {
+                              ...post,
+                              dislikes_count: post.likes_count - 1,
+                              dislike_id: null,
+                          }
+                        : post;
+                }),
+            }));
+        } catch (err) {
+            // console.log(err);
+        }
+    };
+
     return (
         <Card className={styles.Post}>
             <Card.Body>
@@ -148,11 +188,11 @@ const Post = (props) => {
                             <i className="fas fa-trash" />
                         </OverlayTrigger>
                     ) : dislike_id ? (
-                        <span onClick={() => {}}>
-                            <i className={`fas fa-fire ${styles.Fire}`} />
+                        <span onClick={handleRemoveDisLike}>
+                            <i className={`fas fa-trash ${styles.Fire}`} />
                         </span>
                     ) : currentUser ? (
-                        <span onClick={() => {}}>
+                        <span onClick={handleAddDisLike}>
                             <i
                                 className={`fas fa-trash ${styles.FireOutline}`}
                             />
