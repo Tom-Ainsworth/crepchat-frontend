@@ -12,6 +12,7 @@ import { useCurrentUser } from "./context/CurrentUserContext";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
+import PostEditForm from "./pages/posts/PostEditForm";
 
 function App() {
     const currentUser = useCurrentUser();
@@ -59,6 +60,11 @@ function App() {
                         exact
                         path="/posts/create"
                         render={() => <PostCreateForm />}
+                    />
+                    <Route
+                        exact
+                        path="/posts/:id/edit"
+                        render={() => <PostEditForm />}
                     />
                     <Route
                         exact
