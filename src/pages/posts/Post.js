@@ -3,13 +3,14 @@ import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 // Internal
 import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../context/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Post = (props) => {
     const {
@@ -32,6 +33,20 @@ const Post = (props) => {
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+    const history = useHistory();
+
+    const handleEdit = () => {
+        history.push(`/posts/${id}/edit`);
+    };
+
+    const handleDelete = async () => {
+        try {
+            await axiosRes.delete(`/posts/${id}/`);
+            history.goBack();
+        } catch (err) {
+            // console.log(err)
+        }
+    };
 
     const handleAddLike = async () => {
         try {
@@ -124,7 +139,12 @@ const Post = (props) => {
                     <div className="d-flex align-items-center">
                         <span>
                             {updated_at}
-                            {is_owner && postPage && "(dropdown Menu here)"}
+                            {is_owner && postPage && (
+                                <MoreDropdown
+                                    handleEdit={handleEdit}
+                                    handleDelete={handleDelete}
+                                />
+                            )}
                         </span>
                     </div>
                 </Media>
