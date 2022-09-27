@@ -11,9 +11,11 @@ import LogInForm from "./pages/auth/LoginInForm";
 import { useCurrentUser } from "./context/CurrentUserContext";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
+import PostsPage from "./pages/posts/PostsPage";
 
 function App() {
     const currentUser = useCurrentUser();
+    const profile_id = currentUser?.profile_id || "";
 
     return (
         <div className={styles.App}>
@@ -24,7 +26,33 @@ function App() {
                 }
             >
                 <Switch>
-                    <Route exact path="/" render={() => <h1>Home</h1>} />
+                    <Route
+                        exact
+                        path="/"
+                        render={() => (
+                            <PostsPage message="No results found. Adjust your search and try again." />
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/feed"
+                        render={() => (
+                            <PostsPage
+                                message="No results found. Adjust your search or follow a user."
+                                filter={`owner__followed__owner__profile=${profile_id}&`}
+                            />
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/liked"
+                        render={() => (
+                            <PostsPage
+                                message="No results found. Adjust your search or like a post"
+                                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                            />
+                        )}
+                    />
                     <Route exact path="/login" render={() => <LogInForm />} />
                     <Route exact path="/signup" render={() => <SignUpForm />} />
                     <Route
