@@ -14,6 +14,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import NoResults from "../../assets/no-results.jpeg";
 import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
 
 function PostsPage({ message, filter = "" }) {
     const [posts, setPosts] = useState({ results: [] });
@@ -80,7 +81,7 @@ function PostsPage({ message, filter = "" }) {
                                 dataLength={posts.results.length}
                                 loader={<Asset spinner />}
                                 hasMore={!!posts.next}
-                                next={() => {}}
+                                next={() => fetchMoreData(posts, setPosts)}
                             />
                         ) : (
                             <Container className={appStyles.Content}>
