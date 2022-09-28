@@ -118,7 +118,7 @@ const SignUpForm = () => {
                     </Form>
                 </Container>
                 <Container className={`mt-3 ${appStyles.Content}`}>
-                    <Link className={styles.Link} to="/signin">
+                    <Link className={styles.Link} to="/login">
                         Already have an account? <span>Log In</span>
                     </Link>
                 </Container>
