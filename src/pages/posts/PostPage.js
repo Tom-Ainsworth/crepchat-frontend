@@ -6,11 +6,13 @@ import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
 
 // Internal
+// sdf
 import appStyles from "../../App.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../context/CurrentUserContext";
+import Comment from "../comments/Comment";
 
 function PostPage() {
     const { id } = useParams();
@@ -46,7 +48,7 @@ function PostPage() {
                     {currentUser ? (
                         <CommentCreateForm
                             profile_id={currentUser.profile_id}
-                            profileImage={profile_image}
+                            profile_image={profile_image}
                             post={id}
                             setPost={setPost}
                             setComments={setComments}
@@ -56,9 +58,7 @@ function PostPage() {
                     ) : null}
                     {comments.results.length ? (
                         comments.results.map((comment) => (
-                            <p key={comment.id}>
-                                {comment.owner}: {comment.content}
-                            </p>
+                            <Comment key={comment.id} {...comment} />
                         ))
                     ) : currentUser ? (
                         <span>
