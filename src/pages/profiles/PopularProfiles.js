@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
-import { useCurrentUser } from "../../context/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Profile from "./Profile";
 
 const PopularProfiles = ({ mobile }) => {

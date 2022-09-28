@@ -11,7 +11,7 @@ import styles from "../styles/NavBar.module.css";
 import {
     useCurrentUser,
     useSetCurrentUser,
-} from "../context/CurrentUserContext";
+} from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
 import useClickOutside from "../hooks/useClickOutside";
 

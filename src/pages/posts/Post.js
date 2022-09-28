@@ -7,7 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 
 // Internal
 import Avatar from "../../components/Avatar";
-import { useCurrentUser } from "../../context/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";

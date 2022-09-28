@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import LogInForm from "./pages/auth/LoginInForm";
-import { useCurrentUser } from "./context/CurrentUserContext";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";

@@ -11,7 +11,7 @@ import appStyles from "../../App.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import CommentCreateForm from "../comments/CommentCreateForm";
-import { useCurrentUser } from "../../context/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Comment from "../comments/Comment";
 import { fetchMoreData } from "../../utils/utils";
 import Asset from "../../components/Asset";

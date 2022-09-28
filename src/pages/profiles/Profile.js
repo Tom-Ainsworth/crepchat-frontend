@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 // Internal
 import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import { useCurrentUser } from "../../context/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from "../../components/Avatar";
 
 const Profile = (props) => {

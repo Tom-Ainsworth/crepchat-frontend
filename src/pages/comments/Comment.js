@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
 import { MoreDropdown } from "../../components/MoreDropdown";
-import { useCurrentUser } from "../../context/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 // Internal
 import styles from "../../styles/Comment.module.css";

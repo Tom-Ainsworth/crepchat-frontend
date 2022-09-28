@@ -14,7 +14,7 @@ import styles from "../../styles/SignUpLoginForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import { useSetCurrentUser } from "../../context/CurrentUserContext";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 function LogInForm() {
     const setCurrentUser = useSetCurrentUser();
