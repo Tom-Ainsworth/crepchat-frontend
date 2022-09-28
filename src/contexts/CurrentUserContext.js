@@ -1,7 +1,9 @@
+// External
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
+// Internal
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 
 export const CurrentUserContext = createContext();
