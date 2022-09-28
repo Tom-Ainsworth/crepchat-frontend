@@ -1,9 +1,13 @@
+// External
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+
+// Internal
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import { useCurrentUser } from "../../context/CurrentUserContext";
+import Profile from "./Profile";
 
 const PopularProfiles = ({ mobile }) => {
     const [profileData, setProfileData] = useState({
@@ -46,12 +50,16 @@ const PopularProfiles = ({ mobile }) => {
                             {popularProfiles.results
                                 .slice(0, 4)
                                 .map((profile) => (
-                                    <p key={profile.id}>{profile.owner}</p>
+                                    <Profile
+                                        key={profile.id}
+                                        profile={profile}
+                                        mobile
+                                    />
                                 ))}
                         </div>
                     ) : (
                         popularProfiles.results.map((profile) => (
-                            <p key={profile.id}>{profile.owner}</p>
+                            <Profile key={profile.id} profile={profile} />
                         ))
                     )}
                 </>
