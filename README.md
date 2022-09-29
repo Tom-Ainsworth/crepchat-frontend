@@ -37,6 +37,9 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
   - [Testing](#testing)
   - [Deployment](#deployment)
   - [Technologies used](#technologies-used)
+    - [Languages](#languages)
+    - [Libraries, frameworks and dependencies](#libraries-frameworks-and-dependencies)
+    - [Development Tools and Programs](#development-tools-and-programs)
   - [Honourable Mentions](#honourable-mentions)
   - [Credits](#credits)
 
@@ -172,30 +175,63 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 
 ## Deployment
 
+This application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account on [Heroku.com](https://www.heroku.com/))
+2. Create a new app, add a unique app name (this project is named "crepchat") and choose your region
+3. Click on create app
+
+4. Push your changes to GitHub
+
+5. Push the code to Heroku using the command git push heroku main
+
 ## Technologies used
 
-- [Heroku](https://dashboard.heroku.com)
-  - for deployment and hosting
-- [Heroku Postgres](https://elements.heroku.com/addons/heroku-postgresql)
-  - used for the database
+### Languages
+
 - HTML
   - Used for the template structures
 - CSS
   - Used to style the markup
 - Javascript
+
+### Libraries, frameworks and dependencies
+
 - [React](https://reactjs.org/)
-  - Javascript library for building the component based UI
+  - Javascript library for building the component based UI and avoiding having to refresh to display dynamic content
 - [ESLint](https://eslint.org/)
-  - Code analysis
-- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-  - Readme formatting
-- [Postman](https://www.postman.com/)
-  - Testing http requests
-- [Balsamiq](https://balsamiq.com/) for creating the wireframes
-- [VS Code](https://code.visualstudio.com/) for the text editor
+  - Linter for error checking and syntax analysis
 - [React Bootstrap](https://react-bootstrap.github.io/)
+  - CSS framework for styled components
+- [Axios](https://axios-http.com/)
+  - Promise based http client for making http requests to the backend API
 - [Cloudinary](https://cloudinary.com/)
   - Used to store static files and media.
+- [Google Fonts](https://fonts.google.com/)
+  - Used for the app fonts throughout
+- [Font Awesome](https://fontawesome.com/)
+  - Used for the icons features around the site on the navbar and posts
+- [Popper](https://popper.js.org/)
+  - Used to make sure the MoreDropdown menu appears correctly on multiple browsers
+- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component)
+  - Used to easily load extra content rather than paginating pages, for a better UX
+- [React Router](https://v5.reactrouter.com/web/guides/philosophy)
+  - Used to dynamically load pages and aid site navigation for the user.
+
+### Development Tools and Programs
+
+- [Heroku](https://dashboard.heroku.com)
+  - for deployment and hosting
+- [Heroku Postgres](https://elements.heroku.com/addons/heroku-postgresql)
+  - used for the database
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
+  - Readme formatting
+
+- [Postman](https://www.postman.com/)
+  - Testing http requests during development
+- [Balsamiq](https://balsamiq.com/) for creating the wireframes
+- [VS Code](https://code.visualstudio.com/) Used during development to write code
 - [GitHub](https://github.com/)
   - Used for version control throughout the build process
   - GitHub Projects used to organise user stories and tasks.
@@ -220,4 +256,3 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
   - For the site favicon and manifest
 - [flaticon.com](https://www.flaticon.com/free-icon/upload_3097412?term=upload&page=1&position=1&page=1&position=1&related_id=3097412&origin=tag)
   - For the upload image icon
-  -
