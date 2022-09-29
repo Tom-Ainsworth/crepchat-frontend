@@ -54,7 +54,10 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
     - [404 error page](#404-error-page)
   - [Future Development](#future-development)
   - [Testing](#testing)
-    - [Navbar](#navbar)
+    - [Navbar Tests](#navbar-tests)
+    - [Post Tests](#post-tests)
+    - [Profile Tests](#profile-tests)
+    - [Comments Tests](#comments-tests)
   - [Deployment](#deployment)
   - [Technologies used](#technologies-used)
     - [Languages](#languages)
@@ -391,7 +394,7 @@ Manual tests were carried out to ensure all functionality added to the site is w
 
 I went through the site and checked that all links and buttons were working, including:
 
-### Navbar
+### Navbar Tests
 
 - Navbar links for logged out users
   - Logo routes to homepage
@@ -406,15 +409,28 @@ I went through the site and checked that all links and buttons were working, inc
   - Liked routes to liked page filtered by 'liked' user posts
   - Logout routes to homepage and logs the user out
   - Avatar and Profile route to logged in users profile page
-- Most followed Avatar links to profile
+
+### Post Tests
+
 - Clicking on a post routes to that posts' PostPage
+- While on a PostPage, clicking the 3 dots in the top right opens the edit/delete menu
+- Clicking edit routes to the edit post page, with any current data displayed so the user knows what they've already added
+- Clicking delete sends a delete request, and reroutes to the last page that the user was on
 - Clicking the Comment icon on a post routes to that posts' PostPage
-- Like icon adds or removes a like as expected, and is updated in the backed likes table
-- Dislike icon adds or removes a dislike as expected, and is updated in the backend dislikes table
+- Like icon adds or removes a like as expected, updating the likes_count, and is updated in the backed likes table
+- Dislike icon adds or removes a dislike as expected, updating the dislikes_count, and is updated in the backend dislikes table
 - Follow/Unfollow buttons on the Most followed profiles work as expected, updating the state in real time, and updating the backed Followers table
 - Follow/Unfollow buttons on a profile page work as expected, updating the state in real time, and updating the backed Followers table
+
+### Profile Tests
+
+- Most followed Avatar links to profile page
+
+### Comments Tests
+
 - post button in the comments section works as expected, adding the comment to the top of the list, and updating the 'comment_count' state
--
+- comments_count displays on all pages that feature one or more posts
+- When adding or removing a comment, the comments_count state changes to reflect it, and the backend updates.
 
 ## Deployment
 
