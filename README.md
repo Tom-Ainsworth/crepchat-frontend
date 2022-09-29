@@ -245,6 +245,10 @@ This application has been deployed from GitHub to Heroku by following the steps:
   - Used for the site flow and ERD diagrams.
 - [Coolers](https://coolors.co)
   - for the site colour scheme.
+- [Favicon.io](https://favicon.io/)
+  - For the site favicon and manifest
+- [flaticon.com](https://www.flaticon.com/free-icon/upload_3097412?term=upload&page=1&position=1&page=1&position=1&related_id=3097412&origin=tag)
+  - For the upload image icon
 
 ## Honourable Mentions
 
@@ -255,10 +259,5 @@ This application has been deployed from GitHub to Heroku by following the steps:
 ## Credits
 
 - [Code Institute](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwm8WZBhBUEiwA178UnL1yYZ4TCqpEYl__6IceaLdPrDDLtFgZQYygGXkvj5IS4fZ5dLji8BoCbnQQAvD_BwE)
-  - For the boilerplate code used and adapted from their Moments walkthrough tutorial
-- [Google Fonts](https://fonts.google.com/)
-  - For the site fonts
-- [Favicon.io](https://favicon.io/)
-  - For the site favicon and manifest
-- [flaticon.com](https://www.flaticon.com/free-icon/upload_3097412?term=upload&page=1&position=1&page=1&position=1&related_id=3097412&origin=tag)
-  - For the upload image icon
+
+  - For the boilerplate code used throughout the project and adapted from their Moments walkthrough tutorial. It was a huge part in me learning React and being able to build this project.
