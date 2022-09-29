@@ -18,6 +18,7 @@ import Asset from "../../components/Asset";
 
 function PostPage() {
     const { id } = useParams();
+
     const [post, setPost] = useState({ results: [] });
 
     const currentUser = useCurrentUser();
