@@ -2,6 +2,8 @@
 
 Developer: Tom Ainsworth
 
+[Deployed Site](https://crepchat.herokuapp.com/)
+
 This repository contains the frontend React app for the fullstack application Crep Chat - a content site for trainer enthusiasts to chat about their favourite pairs.
 Built using React.
 
@@ -33,6 +35,25 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
       - [Typography](#typography)
   - [Agile Development Process](#agile-development-process)
   - [**Current Features**](#current-features)
+    - [Home Page](#home-page)
+    - [Logo and Navigation Bar](#logo-and-navigation-bar)
+    - [Sign up form](#sign-up-form)
+    - [Login form](#login-form)
+    - [Post create/update form](#post-createupdate-form)
+    - [Main posts page](#main-posts-page)
+    - [Post page](#post-page)
+    - [Comments Section](#comments-section)
+    - [Likes Section](#likes-section)
+    - [Profile page](#profile-page)
+    - [Profile avatar](#profile-avatar)
+    - [Password change form](#password-change-form)
+    - [Infinite scroll](#infinite-scroll)
+    - [Follow/unfollow](#followunfollow)
+    - [‘Add, liked, feed’ menu](#add-liked-feed-menu)
+    - [Top Users menu](#top-users-menu)
+    - [Category badges](#category-badges)
+    - [Search bar](#search-bar)
+    - [404 error page](#404-error-page)
   - [Future Development](#future-development)
   - [Testing](#testing)
   - [Deployment](#deployment)
@@ -169,6 +190,237 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 
 ## **Current Features**
 
+### Home Page
+
+- Includes navbar and main body
+- Home page heading tells the user what the site is about
+- Contains direct links to sign-up and log-in pages for logged out users, and create post, feed/liked and profile pages for logged in users
+- User stories covered: 1, 2, 5, 7
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/homepage.png">
+</details>
+
+### Logo and Navigation Bar
+
+- Featured and consistent on the all pages
+- Two variants of the navbar:
+  - New or logged out users will see the login and sign up pages, along with Home if they wish to see posts without interactin with them
+  - Logged in users will see more options to interact with the site and see their profile avatar.
+- User stories covered: 1, 2, 5, 7, 8
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/navbar-1.png">
+<img src="docs/features/navbar-2.png">
+<img src="docs/features/navbar-3.png">
+<img src="docs/features/navbar-4.png">
+</details>
+
+### Sign up form
+
+- New users can create an account
+- The user must provide a unique username, password and password confirmation.
+- Once registered, the user is redirected to the login page to log in to their newly created account.
+- Feedback is displayed if the username is taken, the passwords don't match or are too weak, or if any fields are missing.
+- User stories covered: 3
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/signup-1.png">
+<img src="docs/features/signup-2.png">
+</details>
+
+### Login form
+
+- Returning users can login to their account
+- The user must have an account in the system and they must enter the correct username and password
+- Both fields are mandatory
+- Once logged in the user will be navigated to the main posts page
+- Feedback messages show if a field is missing, or the credentials aren't valid
+- User stories covered: 4
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/login.png">
+</details>
+
+### Post create/update form
+
+- Contains image, title, category and description
+- Description field is optional
+- Allows user to share their pictures with others
+- Allows user to categorise their post to make it easy to be found by other users
+- User stories covered: 7, 8, 18, 23
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-post-create-edit-form.png">
+</details>
+
+### Main posts page
+
+- Main posts page is displayed for logged-in users instead of the landing page
+- Contains 3 small menus:
+  - Add, likes & feed
+  - Top Users
+  - Post category badges
+- Contain search bar above all posts
+- Without any applied search filter displays posts added by all users
+- Display all posts ordered by the most recent one
+- User stories covered: 9, 19,
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/feature-main-posts-page.png">
+</details>
+
+### Post page
+
+- Contains details of a single post - image, title, description (if provided by the user) and its category tag
+- Contains number of likes and comments the post has
+- Contains like icon to allow user to like the post
+- Features comments section below the post
+- User stories covered: 10, 11, 12, 13, 14
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/feature-post-page.png">
+</details>
+
+### Comments Section
+
+- Enable users to share their opinion on a specific post
+- Display passed time since adding the post (e.g. 4 minutes ago)
+- Users have an option to update or delete the comment
+- User stories covered: 14, 15, 16, 17
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/feature-comments.png">
+</details>
+
+### Likes Section
+
+- Allow user to express their interest in the post
+- Like icons is marked green if user likes the post
+- User cannot like their own posts
+- Allow user to narrow their search to liked posts only when clicked on the ‘Feed’ option in the small menu
+- User stories covered: 11
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-likes-1.png">
+<img src="docs/features/feature-likes-2.png">
+</details>
+
+### Profile page
+
+- Contains information about the user
+- Displays info how many posts and followers user has and how many users they are following
+- Displays profile information if it was provided by the profile owner
+- Contains a dropdown menu to edit the profile and change profile password
+- User stories covered: 25, 26, 27, 29, 30
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/feature-profile-page.png">
+</details>
+
+### Profile avatar
+
+- Allow users to change their default avatar to their own avatar or picture
+- Displayed in the navbar, at top of the post, within profile page and by user comment
+- Displayed within ’Top Users’ menu
+- User stories covered: 25, 26
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/feature-avatar.png">
+</details>
+
+### Password change form
+
+- Allows user to change their profile password
+- Contains password criteria visible on hover/tap of ‘view password criteria’ button
+- User stories covered: 28
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-password-change-form-1.png">
+<img src="docs/features/feature-password-change-form-2.png">
+</details>
+
+### Infinite scroll
+
+- Allows user to scroll through the content without having to select the next/previous page
+- Used for the posts and comments
+- Improves general user experience and user engagement
+- Displays the loading spinner before loading
+- User stories covered: 20
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-infinite-scroll-1.png">
+<img src="docs/features/feature-infinite-scroll-2.png">
+</details>
+
+### Follow/unfollow
+
+- Users are able to follow a specific profile they like and then be able to easily view their posts in the Feed
+- User stories covered: 31
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/feature-follow-unfollow.png">
+</details>
+
+### ‘Add, liked, feed’ menu
+
+- Allow user to create a post
+- Featured on every page (except for the create/update post/profile or change password)
+- Allow user to view only posts they liked
+- Allow user to view only posts created by users they follow
+- User stories covered: 7, 21, 22
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-add-liked-feed-1.png">
+<img src="docs/features/feature-add-liked-feed-2.png">
+</details>
+
+### Top Users menu
+
+- Displays three most followed users in the app
+- Contains follow buttons next to username which allow following these users
+- Featured on the majority of pages (except for edit post/profile or change password)
+- User stories covered: 32
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-top-users-1.png">
+<img src="docs/features/feature-top-users-2.png">
+</details>
+
+### Category badges
+
+- Allow to tag the post by the type of the cuisine
+- Allow other users to find content they are most interested in
+- User stories covered: 23
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-category-badges-1.png">
+<img src="docs/features/feature-category-badges-2.png">
+</details>
+
+### Search bar
+
+- By typing a phrase in the search bar users can find a specific post or a user they are looking for
+- Allows to search through all post title, users or post category
+- Allows search through liked posts only or posts by users followed
+- User can click on the eraser icon to clear the search content instead of hitting the backspace button
+- User stories covered: 24
+
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-search-bar-1.png">
+<img src="docs/features/feature-search-bar-2.png">
+</details>
+
+### 404 error page
+
+- Displays if the user enters a URL that does not exist
+- Contains a button to redirect user to the main page (in addition to the one in the nabber)
+- User stories covered: 34
+
+<details><summary>See feature screenshot</summary>
+<img src="docs/features/feature-404-page.png">
+</details>
+
 ## Future Development
 
 ## Testing
@@ -261,3 +513,8 @@ This application has been deployed from GitHub to Heroku by following the steps:
 - [Code Institute](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwm8WZBhBUEiwA178UnL1yYZ4TCqpEYl__6IceaLdPrDDLtFgZQYygGXkvj5IS4fZ5dLji8BoCbnQQAvD_BwE)
 
   - For the boilerplate code used throughout the project and adapted from their Moments walkthrough tutorial. It was a huge part in me learning React and being able to build this project.
+
+- [Unsplash](https://unsplash.com/)
+  - For the post and profile images used throughout
+- [Aleksandra Haniok](https://www.linkedin.com/in/aleksandrahaniok/)
+  - For the features readme layout

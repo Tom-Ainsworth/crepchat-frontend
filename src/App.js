@@ -31,13 +31,6 @@ function App() {
                     currentUser ? styles.MainLoggedIn : styles.MainLoggedOut
                 }
             >
-                <h1 className="text-center">
-                    Crepchat - the best community for Sneakerheads
-                </h1>
-                <h2 className="text-center">
-                    Post photos, follow others' and talk about the creps you
-                    love the most with like-minded people!
-                </h2>
                 <Switch>
                     <Route
                         exact

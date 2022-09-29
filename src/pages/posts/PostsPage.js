@@ -51,6 +51,15 @@ function PostsPage({ message, filter = "" }) {
 
     return (
         <Row className="h-100">
+            <Container className="mb-3">
+                <h1 className="text-center">
+                    Crepchat - the best community for Sneakerheads
+                </h1>
+                <h2 className="text-center">
+                    Post photos, follow others' and talk about the creps you
+                    love the most with like-minded people!
+                </h2>
+            </Container>
             <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
                 <PopularProfiles />
             </Col>
