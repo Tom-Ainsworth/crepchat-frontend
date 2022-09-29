@@ -16,8 +16,10 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function PostCreateForm() {
+    useRedirect("loggedOut");
     const [postData, setPostData] = useState({
         caption: "",
         category: "",
