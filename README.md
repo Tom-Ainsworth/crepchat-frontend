@@ -421,16 +421,26 @@ I went through the site and checked that all links and buttons were working, inc
 - Dislike icon adds or removes a dislike as expected, updating the dislikes_count, and is updated in the backend dislikes table
 - Follow/Unfollow buttons on the Most followed profiles work as expected, updating the state in real time, and updating the backed Followers table
 - Follow/Unfollow buttons on a profile page work as expected, updating the state in real time, and updating the backed Followers table
+- Clicking the change image button opens the users os folders for them to upload a saved photo from their device
 
 ### Profile Tests
 
 - Most followed Avatar links to profile page
+- Three dots in the top right of a profile opens editing options
+- Clicking edit profile routes to the edit page, displaying the users current profile and bio content.
+- Clicking the change image button opens the users os folders for them to upload a saved photo from their device
+- Clicking change username routes to a form to change the username, with the current one displayed as the value
+- Clicking change password routes to a form to enter and confirm a new password
+- Clicking the cancel button returns to the previos page
+- Clicking the save button saves the new data to the backend, and updated the profile state to match
 
 ### Comments Tests
 
 - post button in the comments section works as expected, adding the comment to the top of the list, and updating the 'comment_count' state
 - comments_count displays on all pages that feature one or more posts
 - When adding or removing a comment, the comments_count state changes to reflect it, and the backend updates.
+- The comment date is updated when adding or editing a comment
+- When clicking the three dots in the top right of the comment, and menu opens to show an edit and delete button
 
 ## Deployment
 
