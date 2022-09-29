@@ -1,6 +1,7 @@
 // External
 import { forwardRef } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import { useHistory } from "react-router";
 
 // Internal
 import styles from "../styles/MoreDropdown.module.css";
