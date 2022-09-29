@@ -31,7 +31,8 @@ function ProfilePage() {
     const currentUser = useCurrentUser();
     const { id } = useParams();
 
-    const { setProfileData, handleFollow } = useSetProfileData();
+    const { setProfileData, handleFollow, handleUnfollow } =
+        useSetProfileData();
     const { pageProfile } = useProfileData();
 
     const [profile] = pageProfile.results;
@@ -91,7 +92,7 @@ function ProfilePage() {
                         (profile?.following_id ? (
                             <Button
                                 className={`${btnStyles.Button} ${btnStyles.PurpleOutline}`}
-                                onClick={() => {}}
+                                onClick={() => handleUnfollow(profile)}
                             >
                                 unfollow
                             </Button>
@@ -114,9 +115,7 @@ function ProfilePage() {
     const mainProfilePosts = (
         <>
             <hr />
-            <p className="text-center">
-                <strong>{profile?.owner}'s posts</strong>
-            </p>
+            <strong>{profile?.owner}'s posts</strong>
             <hr />
             {profilePosts.results.length ? (
                 <InfiniteScroll
@@ -143,9 +142,6 @@ function ProfilePage() {
 
     return (
         <Row>
-            <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-                <PopularProfiles />
-            </Col>
             <Col className="py-2 p-0 p-lg-2" lg={8}>
                 <PopularProfiles mobile />
                 <Container className={appStyles.Content}>
@@ -158,6 +154,9 @@ function ProfilePage() {
                         <Asset spinner />
                     )}
                 </Container>
+            </Col>
+            <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+                <PopularProfiles />
             </Col>
         </Row>
     );
