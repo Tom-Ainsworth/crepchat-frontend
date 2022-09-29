@@ -1,13 +1,13 @@
 // External
 import { useRef, useState } from "react";
+import { useHistory } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
 import Alert from "react-bootstrap/Alert";
-import { useHistory } from "react-router-dom";
+import Card from "react-bootstrap/Card";
 
 // Internal
 import Upload from "../../assets/upload.png";
@@ -134,7 +134,7 @@ function PostCreateForm() {
                             {image ? (
                                 <>
                                     <figure>
-                                        <Image
+                                        <Card.Img
                                             className="appStyles.Image"
                                             src={image}
                                             rounded

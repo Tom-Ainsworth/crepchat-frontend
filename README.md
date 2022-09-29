@@ -54,6 +54,7 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
     - [404 error page](#404-error-page)
   - [Future Development](#future-development)
   - [Testing](#testing)
+    - [Navbar](#navbar)
   - [Deployment](#deployment)
   - [Technologies used](#technologies-used)
     - [Languages](#languages)
@@ -196,7 +197,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 1, 2, 5, 7
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/homepage.png">
+<img src="docs/features/homepage.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Logo and Navigation Bar
@@ -208,10 +209,10 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 1, 2, 5, 7, 8
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/navbar-1.png">
-<img src="docs/features/navbar-2.png">
-<img src="docs/features/navbar-3.png">
-<img src="docs/features/navbar-4.png">
+<img src="docs/features/navbar-1.png" style="max-height: 50; max-width: 50;">
+<img src="docs/features/navbar-2.png" style="max-height: 50; max-width: 50;">
+<img src="docs/features/navbar-3.png" style="max-height: 50; max-width: 50;">
+<img src="docs/features/navbar-4.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Sign up form
@@ -223,8 +224,8 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 3
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/signup-1.png">
-<img src="docs/features/signup-2.png">
+<img src="docs/features/signup-1.png" style="max-height: 50; max-width: 50;">
+<img src="docs/features/signup-2.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Login form
@@ -237,7 +238,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 4
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/login.png">
+<img src="docs/features/login.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Post create/update form
@@ -250,8 +251,8 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 7, 8
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/post-create-edit-form-1.png">
-<img src="docs/features/post-create-edit-form-1.png">
+<img src="docs/features/post-create-edit-form-1.png" style="max-height: 50; max-width: 50;">
+<img src="docs/features/post-create-edit-form-1.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Post page
@@ -263,7 +264,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 9, 10, 26, 27, 36, 49
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/post-page.png">
+<img src="docs/features/post-page.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Comments Section
@@ -274,7 +275,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 13, 14, 15, 37, 38, 39, 40, 41
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/comments.png">
+<img src="docs/features/comments.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Likes Section
@@ -286,7 +287,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 11, 14, 26, 27, 28, 34, 35
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/likes.png">
+<img src="docs/features/likes.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Profile page
@@ -298,7 +299,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 4, 5, 6, 19, 28, 29, 30
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/profile-page.png">
+<img src="docs/features/profile-page.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Profile Avatar
@@ -309,7 +310,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 8
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/avatar.png">
+<img src="docs/features/avatar.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Password change form
@@ -319,7 +320,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 31
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/password-change-form.png">
+<img src="docs/features/password-change-form.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Infinite scroll
@@ -336,7 +337,7 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 16, 17, 32
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/follow-unfollow.png">
+<img src="docs/features/follow-unfollow.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### 'home' 'liked', feed’ menu
@@ -346,8 +347,8 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 11, 12, 15, 18
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/liked-page.png">
-<img src="docs/features/feed-page.png">
+<img src="docs/features/liked-page.png" style="max-height: 50; max-width: 50;">
+<img src="docs/features/feed-page.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Most Followed Users
@@ -358,8 +359,8 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 33
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/most-followed-1.png">
-<img src="docs/features/most-followed-2.png">
+<img src="docs/features/most-followed-1.png" style="max-height: 50; max-width: 50;">
+<img src="docs/features/most-followed-2.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### Search bar
@@ -369,22 +370,51 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - User stories covered: 13
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/search-bar.png">
+<img src="docs/features/search-bar.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ### 404 error page
 
 - Displays if the user enters a URL that does not exist
 - Features a button to return to the homepage
-- User stories covered: 34
+- User stories covered: 50
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/404-page.png">
+<img src="docs/features/404-page.png" style="max-height: 50; max-width: 50;">
 </details>
 
 ## Future Development
 
 ## Testing
+
+Manual tests were carried out to ensure all functionality added to the site is working as expected
+
+I went through the site and checked that all links and buttons were working, including:
+
+### Navbar
+
+- Navbar links for logged out users
+  - Logo routes to homepage
+  - Home routes to homepage
+  - Log in routes to login page
+  - Sign up routes to signup page
+- Navbar links for logged in users
+  - Create routes to create post page
+  - Logo routes to homepage
+  - Home routes to homepage
+  - Feed routes to feed page filtered by 'followed' user posts
+  - Liked routes to liked page filtered by 'liked' user posts
+  - Logout routes to homepage and logs the user out
+  - Avatar and Profile route to logged in users profile page
+- Most followed Avatar links to profile
+- Clicking on a post routes to that posts' PostPage
+- Clicking the Comment icon on a post routes to that posts' PostPage
+- Like icon adds or removes a like as expected, and is updated in the backed likes table
+- Dislike icon adds or removes a dislike as expected, and is updated in the backend dislikes table
+- Follow/Unfollow buttons on the Most followed profiles work as expected, updating the state in real time, and updating the backed Followers table
+- Follow/Unfollow buttons on a profile page work as expected, updating the state in real time, and updating the backed Followers table
+- post button in the comments section works as expected, adding the comment to the top of the list, and updating the 'comment_count' state
+-
 
 ## Deployment
 
