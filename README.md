@@ -40,18 +40,16 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
     - [Sign up form](#sign-up-form)
     - [Login form](#login-form)
     - [Post create/update form](#post-createupdate-form)
-    - [Main posts page](#main-posts-page)
     - [Post page](#post-page)
     - [Comments Section](#comments-section)
     - [Likes Section](#likes-section)
     - [Profile page](#profile-page)
-    - [Profile avatar](#profile-avatar)
+    - [Profile Avatar](#profile-avatar)
     - [Password change form](#password-change-form)
     - [Infinite scroll](#infinite-scroll)
     - [Follow/unfollow](#followunfollow)
-    - [‘Add, liked, feed’ menu](#add-liked-feed-menu)
-    - [Top Users menu](#top-users-menu)
-    - [Category badges](#category-badges)
+    - ['home' 'liked', feed’ menu](#home-liked-feed-menu)
+    - [Most Followed Users](#most-followed-users)
     - [Search bar](#search-bar)
     - [404 error page](#404-error-page)
   - [Future Development](#future-development)
@@ -244,66 +242,51 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 
 ### Post create/update form
 
-- Contains image, title, category and description
-- Description field is optional
+- Contains caption, category and image fields
 - Allows user to share their pictures with others
-- Allows user to categorise their post to make it easy to be found by other users
-- User stories covered: 7, 8, 18, 23
+- Allows user to categorise their post and write a caption about what it is.
+- caption is optional
+- feedback is given if the user forgets to upload an image or choose a category.
+- User stories covered: 7, 8
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-post-create-edit-form.png">
-</details>
-
-### Main posts page
-
-- Main posts page is displayed for logged-in users instead of the landing page
-- Contains 3 small menus:
-  - Add, likes & feed
-  - Top Users
-  - Post category badges
-- Contain search bar above all posts
-- Without any applied search filter displays posts added by all users
-- Display all posts ordered by the most recent one
-- User stories covered: 9, 19,
-
-<details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-main-posts-page.png">
+<img src="docs/features/post-create-edit-form-1.png">
+<img src="docs/features/post-create-edit-form-1.png">
 </details>
 
 ### Post page
 
-- Contains details of a single post - image, title, description (if provided by the user) and its category tag
-- Contains number of likes and comments the post has
-- Contains like icon to allow user to like the post
-- Features comments section below the post
-- User stories covered: 10, 11, 12, 13, 14
+- Contains details of a single post - caption, category and the image
+- Contains number of likes, comments and dislikes the post has
+- Contains like and dislike icons to interact with.
+- Features comments section below the post, which update when a new one is posted, listed latest first.
+- User stories covered: 9, 10, 26, 27, 36, 49
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-post-page.png">
+<img src="docs/features/post-page.png">
 </details>
 
 ### Comments Section
 
 - Enable users to share their opinion on a specific post
-- Display passed time since adding the post (e.g. 4 minutes ago)
 - Users have an option to update or delete the comment
-- User stories covered: 14, 15, 16, 17
+- Display passed time since adding/updating the comment (e.g. 4 minutes ago)
+- User stories covered: 13, 14, 15, 37, 38, 39, 40, 41
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-comments.png">
+<img src="docs/features/comments.png">
 </details>
 
 ### Likes Section
 
-- Allow user to express their interest in the post
-- Like icons is marked green if user likes the post
+- Allow user to rate the post
+- Like icons are marked red if user has liked/disliked the post
 - User cannot like their own posts
-- Allow user to narrow their search to liked posts only when clicked on the ‘Feed’ option in the small menu
-- User stories covered: 11
+- Allow user to narrow their search to liked posts only when clicked on the 'liked option in the navbar menu
+- User stories covered: 11, 14, 26, 27, 28, 34, 35
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-likes-1.png">
-<img src="docs/features/feature-likes-2.png">
+<img src="docs/features/likes.png">
 </details>
 
 ### Profile page
@@ -311,33 +294,32 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - Contains information about the user
 - Displays info how many posts and followers user has and how many users they are following
 - Displays profile information if it was provided by the profile owner
-- Contains a dropdown menu to edit the profile and change profile password
-- User stories covered: 25, 26, 27, 29, 30
+- Contains a dropdown menu to edit the profile details, username and password
+- User stories covered: 4, 5, 6, 19, 28, 29, 30
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-profile-page.png">
+<img src="docs/features/profile-page.png">
 </details>
 
-### Profile avatar
+### Profile Avatar
 
 - Allow users to change their default avatar to their own avatar or picture
-- Displayed in the navbar, at top of the post, within profile page and by user comment
-- Displayed within ’Top Users’ menu
-- User stories covered: 25, 26
+- Displayed in the navbar, at top of the post, within profile page and by next to comments
+- Displayed within 'Most Followed Profiles' section
+- User stories covered: 8
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-avatar.png">
+<img src="docs/features/avatar.png">
 </details>
 
 ### Password change form
 
 - Allows user to change their profile password
 - Contains password criteria visible on hover/tap of ‘view password criteria’ button
-- User stories covered: 28
+- User stories covered: 31
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-password-change-form-1.png">
-<img src="docs/features/feature-password-change-form-2.png">
+<img src="docs/features/password-change-form.png">
 </details>
 
 ### Infinite scroll
@@ -345,80 +327,59 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 - Allows user to scroll through the content without having to select the next/previous page
 - Used for the posts and comments
 - Improves general user experience and user engagement
-- Displays the loading spinner before loading
-- User stories covered: 20
-
-<details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-infinite-scroll-1.png">
-<img src="docs/features/feature-infinite-scroll-2.png">
-</details>
+- Displays the loading spinner before loading if the internet speed is too slow
+- User stories covered: 16
 
 ### Follow/unfollow
 
 - Users are able to follow a specific profile they like and then be able to easily view their posts in the Feed
-- User stories covered: 31
+- User stories covered: 16, 17, 32
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-follow-unfollow.png">
+<img src="docs/features/follow-unfollow.png">
 </details>
 
-### ‘Add, liked, feed’ menu
+### 'home' 'liked', feed’ menu
 
-- Allow user to create a post
-- Featured on every page (except for the create/update post/profile or change password)
-- Allow user to view only posts they liked
-- Allow user to view only posts created by users they follow
-- User stories covered: 7, 21, 22
+- Filters content by user interaction.
+- Features all posts, posts by followed users, liked posts
+- User stories covered: 11, 12, 15, 18
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-add-liked-feed-1.png">
-<img src="docs/features/feature-add-liked-feed-2.png">
+<img src="docs/features/liked-page.png">
+<img src="docs/features/feed-page.png">
 </details>
 
-### Top Users menu
+### Most Followed Users
 
 - Displays three most followed users in the app
 - Contains follow buttons next to username which allow following these users
 - Featured on the majority of pages (except for edit post/profile or change password)
-- User stories covered: 32
+- User stories covered: 33
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-top-users-1.png">
-<img src="docs/features/feature-top-users-2.png">
-</details>
-
-### Category badges
-
-- Allow to tag the post by the type of the cuisine
-- Allow other users to find content they are most interested in
-- User stories covered: 23
-
-<details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-category-badges-1.png">
-<img src="docs/features/feature-category-badges-2.png">
+<img src="docs/features/most-followed-1.png">
+<img src="docs/features/most-followed-2.png">
 </details>
 
 ### Search bar
 
 - By typing a phrase in the search bar users can find a specific post or a user they are looking for
-- Allows to search through all post title, users or post category
-- Allows search through liked posts only or posts by users followed
-- User can click on the eraser icon to clear the search content instead of hitting the backspace button
-- User stories covered: 24
+- Allows to search through all post title or users
+- User stories covered: 13
 
 <details><summary>See feature screenshots</summary>
-<img src="docs/features/feature-search-bar-1.png">
-<img src="docs/features/feature-search-bar-2.png">
+<img src="docs/features/search-bar.png">
 </details>
 
 ### 404 error page
 
 - Displays if the user enters a URL that does not exist
-- Contains a button to redirect user to the main page (in addition to the one in the nabber)
+- Features a button to return to the homepage
 - User stories covered: 34
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-404-page.png">
+<img src="docs/features/404-page.png">
 </details>
 
 ## Future Development
