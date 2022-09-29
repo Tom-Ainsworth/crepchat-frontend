@@ -16,6 +16,7 @@ import appStyles from "../../App.module.css";
 
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
+import { setTokenTimestamp } from "../../utils/utils";
 
 function LogInForm() {
     const setCurrentUser = useSetCurrentUser();
@@ -48,6 +49,7 @@ function LogInForm() {
                 LogInData
             );
             setCurrentUser(data.user);
+            setTokenTimestamp(data);
             history.goBack();
         } catch (err) {
             setErrors(err.response?.data);
