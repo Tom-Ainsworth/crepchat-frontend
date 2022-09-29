@@ -57,7 +57,6 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
     - [Navbar Tests](#navbar-tests)
     - [Post Tests](#post-tests)
     - [Profile Tests](#profile-tests)
-    - [Authentication](#authentication)
     - [Comments Tests](#comments-tests)
   - [Deployment](#deployment)
   - [Technologies used](#technologies-used)
@@ -389,6 +388,18 @@ With just shy of 2 weeks to complete the project, I will be covering the whole f
 
 ## Future Development
 
+- Add filtered page for post categories, so users can choose to see posts from a particular brand
+- Add Reviews section with more detailed views on a particular shoe
+- Change like/dislike functionality so that users cannot have 1 of each, and they update together
+- Add comment likes
+- Add comment replies to open a comment thread
+- Add direct messaging between users
+- Add email registration rather than just username
+- Password recovery via email
+- Add notifications and make the site a progressive web app to show notification icons
+- Admin permissions so that certain admin users can monitor content and comments added to keep users safe
+- Add a marketplace type function so users can buy, sell and trade their sneakers
+
 ## Testing
 
 Manual tests were carried out to ensure all functionality added to the site is working as expected
@@ -434,12 +445,6 @@ I went through the site and checked that all links and buttons were working, inc
 - Clicking change password routes to a form to enter and confirm a new password
 - Clicking the cancel button returns to the previos page
 - Clicking the save button saves the new data to the backend, and updated the profile state to match
-
-### Authentication
-
-- Logged Out users
-  - Cannot comment, like, follow users or create a post
-  - Cannot properly view the liked or feed pages, and will instead just see all posts displayed
 
 ### Comments Tests
 
