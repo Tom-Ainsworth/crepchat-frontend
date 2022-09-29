@@ -17,12 +17,14 @@ import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useProfileData } from "../../contexts/ProfileDataContext";
 
 function PostsPage({ message, filter = "" }) {
     const [posts, setPosts] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
     const currentUser = useCurrentUser();
+    const ProfileDataContext = useProfileData();
 
     const [query, setQuery] = useState("");
 
@@ -47,7 +49,7 @@ function PostsPage({ message, filter = "" }) {
         return () => {
             clearTimeout(timer);
         };
-    }, [filter, query, pathname, currentUser]);
+    }, [filter, query, pathname, currentUser, ProfileDataContext]);
 
     return (
         <Row className="h-100">
@@ -56,8 +58,8 @@ function PostsPage({ message, filter = "" }) {
                     Crepchat - the best community for Sneakerheads
                 </h1>
                 <h2 className="text-center">
-                    Post photos, follow others' and talk about the creps you
-                    love the most with like-minded people!
+                    Post photos, follow others and talk about the creps you love
+                    the most with like-minded people!
                 </h2>
             </Container>
             <Col md={4} className="d-none d-lg-block p-0 p-lg-2">

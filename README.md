@@ -57,6 +57,7 @@ Link to the backend repository [Crep Chat Backend](https://github.com/Tom-Ainswo
     - [Navbar Tests](#navbar-tests)
     - [Post Tests](#post-tests)
     - [Profile Tests](#profile-tests)
+    - [Authentication](#authentication)
     - [Comments Tests](#comments-tests)
   - [Deployment](#deployment)
   - [Technologies used](#technologies-used)
@@ -434,13 +435,21 @@ I went through the site and checked that all links and buttons were working, inc
 - Clicking the cancel button returns to the previos page
 - Clicking the save button saves the new data to the backend, and updated the profile state to match
 
+### Authentication
+
+- Logged Out users
+  - Cannot comment, like, follow users or create a post
+  - Cannot properly view the liked or feed pages, and will instead just see all posts displayed
+
 ### Comments Tests
 
 - post button in the comments section works as expected, adding the comment to the top of the list, and updating the 'comment_count' state
 - comments_count displays on all pages that feature one or more posts
-- When adding or removing a comment, the comments_count state changes to reflect it, and the backend updates.
+- When adding or removing a comment, the comments_count state changes to reflect it, and the backend updates
 - The comment date is updated when adding or editing a comment
 - When clicking the three dots in the top right of the comment, and menu opens to show an edit and delete button
+- Clicking edit opens the comment up to edit, with the current comment shown. Clicking post then saves this comment and the date becomes the updated time
+- Clicking delete removes the comment, adjusts the comments_count state, and moves the other comments to the top in order
 
 ## Deployment
 
