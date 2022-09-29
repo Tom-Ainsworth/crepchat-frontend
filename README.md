@@ -184,6 +184,12 @@ This application has been deployed from GitHub to Heroku by following the steps:
 4. Push your changes to GitHub
 
 5. Push the code to Heroku using the command git push heroku main
+6. Log in to heroku.com and open the dashboard for your react application (remember this is separate from the DRF application that runs your API)
+7. Select the “Deploy” tab in the dashboard
+8. Scroll down to the bottom and then select “Deploy Branch”
+9. Wait for your build to complete (you can click “view build log” to watch the process in a larger window)
+10. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+11. Congratulations, you've deployed your front-end application to Heroku!
 
 ## Technologies used
 
