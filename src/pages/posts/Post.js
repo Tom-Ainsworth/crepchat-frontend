@@ -19,7 +19,7 @@ const Post = (props) => {
         profile_id,
         profile_image,
         comments_count,
-        _count,
+        likes_count,
         dislikes_count,
         like_id,
         dislike_id,
