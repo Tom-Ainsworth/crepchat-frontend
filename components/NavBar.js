@@ -1,20 +1,23 @@
+// Next
+import Link from "next/link";
+import Image from "next/image";
+
 // External
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 // Internal
-import logo from "../assets/logo.png";
+import logo from "../public/logo.png";
 import styles from "../styles/NavBar.module.css";
 import {
 	useCurrentUser,
 	useSetCurrentUser,
-} from "../contexts/CurrentUserContext";
+} from "../src/contexts/CurrentUserContext";
 import Avatar from "./Avatar";
-import useClickOutside from "../hooks/useClickOutside";
-import { removeTokenTimestamp } from "../utils/utils";
+import useClickOutside from "../src/hooks/useClickOutside";
+import { removeTokenTimestamp } from "../src/utils/utils";
 
 const NavBar = () => {
 	const currentUser = useCurrentUser();
@@ -32,36 +35,40 @@ const NavBar = () => {
 		}
 	};
 	const addPostIcon = (
-		<NavLink
-			to="/posts/create"
+		<Link
+			href="/posts/create"
 			className={styles.NavLink}
 			activeClassName={styles.Active}
 		>
 			<i className="fas fa-plus-square"></i> Create
-		</NavLink>
+		</Link>
 	);
 
 	const loggedInIcons = (
 		<>
-			<NavLink
-				to="/feed"
+			<Link
+				href="/feed"
 				className={styles.NavLink}
 				activeClassName={styles.Active}
 			>
 				<i className="fas fa-stream"></i> Feed
-			</NavLink>
-			<NavLink
-				to="/liked"
+			</Link>
+			<Link
+				href="/liked"
 				className={styles.NavLink}
 				activeClassName={styles.Active}
 			>
 				<i className="fas fa-heart"></i> Liked
-			</NavLink>
-			<NavLink to="/" className={styles.NavLink} onClick={handleLogout}>
+			</Link>
+			<Link
+				href="/"
+				className={styles.NavLink}
+				activeClassName={styles.Active}
+			>
 				<i className="fas fa-sign-out-alt"></i> Logout
-			</NavLink>
-			<NavLink
-				to={`/profiles/${currentUser?.profile_id}`}
+			</Link>
+			<Link
+				href={`/profiles/${currentUser?.profile_id}`}
 				className={styles.NavLink}
 			>
 				<Avatar
@@ -69,25 +76,25 @@ const NavBar = () => {
 					height={40}
 					text="Profile"
 				/>
-			</NavLink>
+			</Link>
 		</>
 	);
 	const loggedOutIcons = (
 		<>
-			<NavLink
-				to="/login"
+			<Link
+				href="/login"
 				className={styles.NavLink}
 				activeClassName={styles.Active}
 			>
 				<i className="fas fa-sign-in-alt"></i> Log In
-			</NavLink>
-			<NavLink
-				to="/signup"
+			</Link>
+			<Link
+				href="/signup"
 				className={styles.NavLink}
 				activeClassName={styles.Active}
 			>
 				<i className="fas fa-user-plus"></i> Sign Up
-			</NavLink>
+			</Link>
 		</>
 	);
 
@@ -99,30 +106,29 @@ const NavBar = () => {
 			fixed="top"
 		>
 			<Container className={styles.Container}>
-				<NavLink to="/">
-					<Navbar.Brand>
-						<img src={logo} alt="logo" height="25" />
-					</Navbar.Brand>
-				</NavLink>
+				<Link href="/">
+					<NavBar.Brand>
+						<Image src={logo} alt="logo" height="25" />
+					</NavBar.Brand>
+				</Link>
 				{currentUser && addPostIcon}
-				<Navbar.Toggle
+				<NavBar.Toggle
 					ref={ref}
 					onClick={() => setExpanded(!expanded)}
 					aria-controls="basic-navbar-nav"
 				/>
-				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className=" text-left">
-						<NavLink
-							exact
-							to="/"
+				<NavBar.Collapse id="basic-navbar-nav">
+					<Nav className="text-left">
+						<Link
+							href="/"
 							className={styles.NavLink}
 							activeClassName={styles.Active}
 						>
 							<i className="fas fa-home"></i> Home
-						</NavLink>
+						</Link>
 						{currentUser ? loggedInIcons : loggedOutIcons}
 					</Nav>
-				</Navbar.Collapse>
+				</NavBar.Collapse>
 			</Container>
 		</Navbar>
 	);
