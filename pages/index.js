@@ -1,6 +1,5 @@
 // External
 import Container from "react-bootstrap/Container";
-import { Route, Switch } from "react-router-dom";
 
 // Internal
 import styles from "../styles/global.css";
@@ -19,7 +18,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import NotFound from "../components/NotFound";
 
-function App() {
+export default function Home() {
 	const currentUser = useCurrentUser();
 
 	return (
@@ -30,16 +29,9 @@ function App() {
 					currentUser ? styles.MainLoggedIn : styles.MainLoggedOut
 				}
 			>
-				<Switch>
-					<Route
-						exact
-						path="/"
-						render={() => (
-							<PostsPage message="No results found. Adjust your search and try again." />
-						)}
-					/>
+				<PostsPage message="No results found. Adjust your search and try again." />
 
-					{/* <Route
+				{/* <Route
 						exact
 						path="/posts/create"
 						render={() => <PostCreateForm />}
@@ -75,10 +67,7 @@ function App() {
 						render={() => <ProfileEditForm />}
 					/>
 					<Route render={() => <NotFound />} /> */}
-				</Switch>
 			</Container>
 		</div>
 	);
 }
-
-export default App;
