@@ -19,7 +19,7 @@ import Avatar from "./Avatar";
 import useClickOutside from "../src/hooks/useClickOutside";
 import { removeTokenTimestamp } from "../src/utils/utils";
 
-const NavBar = () => {
+export default function NavBar() {
 	const currentUser = useCurrentUser();
 	const setCurrentUser = useSetCurrentUser();
 
@@ -107,17 +107,17 @@ const NavBar = () => {
 		>
 			<Container className={styles.Container}>
 				<Link href="/">
-					<NavBar.Brand>
+					<Navbar.Brand>
 						<Image src={logo} alt="logo" height="25" />
-					</NavBar.Brand>
+					</Navbar.Brand>
 				</Link>
 				{currentUser && addPostIcon}
-				<NavBar.Toggle
+				<Navbar.Toggle
 					ref={ref}
 					onClick={() => setExpanded(!expanded)}
 					aria-controls="basic-navbar-nav"
 				/>
-				<NavBar.Collapse id="basic-navbar-nav">
+				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="text-left">
 						<Link
 							href="/"
@@ -128,10 +128,8 @@ const NavBar = () => {
 						</Link>
 						{currentUser ? loggedInIcons : loggedOutIcons}
 					</Nav>
-				</NavBar.Collapse>
+				</Navbar.Collapse>
 			</Container>
 		</Navbar>
 	);
-};
-
-export default NavBar;
+}

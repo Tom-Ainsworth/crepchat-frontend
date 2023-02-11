@@ -2,21 +2,21 @@
 import Container from "react-bootstrap/Container";
 
 // Internal
-import styles from "../styles/global.css";
+import styles from "../styles/App.module.css";
 import NavBar from "../components/NavBar";
-import "./api/axiosDefaults";
-import SignUpForm from "./pages/auth/SignUpForm";
-import LogInForm from "./pages/auth/LoginInForm";
-import { useCurrentUser } from "./contexts/CurrentUserContext";
-import PostCreateForm from "./pages/posts/PostCreateForm";
-import PostPage from "./pages/posts/PostPage";
-import PostsPage from "./pages/posts/PostsPage";
-import PostEditForm from "./pages/posts/PostEditForm";
-import ProfilePage from "./pages/profiles/ProfilePage";
-import UsernameForm from "./pages/profiles/UsernameForm";
-import UserPasswordForm from "./pages/profiles/UserPasswordForm";
-import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-import NotFound from "../components/NotFound";
+import "../src/api/axiosDefaults";
+// import SignUpForm from "./pages/auth/SignUpForm";
+// import LogInForm from "./pages/auth/LoginInForm";
+import { useCurrentUser } from "../src/contexts/CurrentUserContext";
+// import PostCreateForm from "./pages/posts/PostCreateForm";
+// import PostPage from "./pages/posts/PostPage";
+import PostsPage from "../src/pages/posts/PostsPage";
+// import PostEditForm from "./pages/posts/PostEditForm";
+// import ProfilePage from "./pages/profiles/ProfilePage";
+// import UsernameForm from "./pages/profiles/UsernameForm";
+// import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+// import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+// import NotFound from "../components/NotFound";
 
 export default function Home() {
 	const currentUser = useCurrentUser();
