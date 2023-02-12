@@ -13,10 +13,12 @@ import styles from "../styles/SignUpLoginForm.module.css";
 import btnStyles from "../styles/Button.module.css";
 import appStyles from "../styles/App.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const SignUpForm = () => {
 	// useRedirect("loggedIn");
 
+	let router = useRouter();
 	const [signUpData, setSignUpData] = useState({
 		username: "",
 		password1: "",
@@ -36,11 +38,8 @@ const SignUpForm = () => {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		try {
-			await axios.post(
-				"https://crepchat-api.onrender.com/dj-rest-auth/registration/",
-				signUpData
-			);
-			// history.push("/login");
+			await axios.post("/dj-rest-auth/registration/", signUpData);
+			router.push("/login");
 		} catch (err) {
 			setErrors(err.response?.data);
 		}

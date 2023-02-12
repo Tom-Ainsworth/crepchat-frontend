@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Layout from "../components/layout";
 import "../styles/global.css";
 export default function App({ Component, pageProps }) {
 	return (
@@ -16,7 +17,9 @@ export default function App({ Component, pageProps }) {
 				/>
 				<title>Crep Chat</title>
 			</Head>
-			<Component {...pageProps} />;
+			<Layout>
+				<Component {...pageProps} />;
+			</Layout>
 		</>
 	);
 }

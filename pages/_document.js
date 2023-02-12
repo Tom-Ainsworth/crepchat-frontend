@@ -5,7 +5,7 @@ export default function Document() {
 		<Html lang="en">
 			<Head>
 				<meta charset="utf-8" />
-				<link rel="icon" href="%PUBLIC_URL%/favicon-16x16.ico" />
+				<link rel="icon" href="/favicon-16x16.ico" />
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
@@ -28,23 +28,23 @@ export default function Document() {
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
-					href="%PUBLIC_URL%/apple-touch-icon.png"
+					href="/apple-touch-icon.png"
 				/>
 				<link
 					rel="icon"
 					type="image/png"
 					sizes="32x32"
-					href="%PUBLIC_URL%/favicon-32x32.png"
+					href="/favicon-32x32.png"
 				/>
 				<link
 					rel="icon"
 					type="image/png"
 					sizes="16x16"
-					href="%PUBLIC_URL%/favicon-16x16.png"
+					href="/favicon-16x16.png"
 				/>
 				<link
 					rel="manifest"
-					href="%PUBLIC_URL%/site.webmanifest"
+					href="/site.webmanifest"
 					crossorigin="use-credentials"
 				/>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />

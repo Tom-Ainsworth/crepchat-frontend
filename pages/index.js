@@ -5,8 +5,6 @@ import Container from "react-bootstrap/Container";
 import styles from "../styles/App.module.css";
 import NavBar from "../components/NavBar";
 import "../src/api/axiosDefaults";
-// import SignUpForm from "./pages/auth/SignUpForm";
-// import LogInForm from "./pages/auth/LoginInForm";
 import { useCurrentUser } from "../src/contexts/CurrentUserContext";
 // import PostCreateForm from "./pages/posts/PostCreateForm";
 // import PostPage from "./pages/posts/PostPage";
