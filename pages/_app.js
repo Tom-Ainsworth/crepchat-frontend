@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
 					name="description"
 					content="Crep Chat - The Global Social Platform for Sneakerheads"
 				/>
+				<title>Crep Chat</title>
 			</Head>
 			<Component {...pageProps} />;
 		</>

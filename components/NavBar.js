@@ -35,36 +35,20 @@ export default function NavBar() {
 		}
 	};
 	const addPostIcon = (
-		<Link
-			href="/posts/create"
-			className={styles.NavLink}
-			activeClassName={styles.Active}
-		>
+		<Link href="/posts/create" className={styles.NavLink}>
 			<i className="fas fa-plus-square"></i> Create
 		</Link>
 	);
 
 	const loggedInIcons = (
 		<>
-			<Link
-				href="/feed"
-				className={styles.NavLink}
-				activeClassName={styles.Active}
-			>
+			<Link href="/feed" className={styles.NavLink}>
 				<i className="fas fa-stream"></i> Feed
 			</Link>
-			<Link
-				href="/liked"
-				className={styles.NavLink}
-				activeClassName={styles.Active}
-			>
+			<Link href="/liked" className={styles.NavLink}>
 				<i className="fas fa-heart"></i> Liked
 			</Link>
-			<Link
-				href="/"
-				className={styles.NavLink}
-				activeClassName={styles.Active}
-			>
+			<Link href="/" className={styles.NavLink}>
 				<i className="fas fa-sign-out-alt"></i> Logout
 			</Link>
 			<Link
@@ -81,18 +65,10 @@ export default function NavBar() {
 	);
 	const loggedOutIcons = (
 		<>
-			<Link
-				href="/login"
-				className={styles.NavLink}
-				activeClassName={styles.Active}
-			>
+			<Link href="/login" className={styles.NavLink}>
 				<i className="fas fa-sign-in-alt"></i> Log In
 			</Link>
-			<Link
-				href="/signup"
-				className={styles.NavLink}
-				activeClassName={styles.Active}
-			>
+			<Link href="/signup" className={styles.NavLink}>
 				<i className="fas fa-user-plus"></i> Sign Up
 			</Link>
 		</>
@@ -119,11 +95,7 @@ export default function NavBar() {
 				/>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="text-left">
-						<Link
-							href="/"
-							className={styles.NavLink}
-							activeClassName={styles.Active}
-						>
+						<Link href="/" className={styles.NavLink}>
 							<i className="fas fa-home"></i> Home
 						</Link>
 						{currentUser ? loggedInIcons : loggedOutIcons}
