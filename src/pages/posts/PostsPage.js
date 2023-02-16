@@ -15,7 +15,7 @@ import Post from "./Post";
 import NoResults from "../../../public/no-results.jpeg";
 import Asset from "../../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
-import PopularProfiles from "../profiles/PopularProfiles";
+import PopularProfiles from "../../../components/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useProfileData } from "../../contexts/ProfileDataContext";
 
@@ -85,18 +85,20 @@ function PostsPage({ message, filter = "" }) {
 					<>
 						{posts.results.length ? (
 							<InfiniteScroll
-								children={posts.results.map((post) => (
+								dataLength={posts.results.length}
+								loader={<Asset spinner />}
+								hasMore={!!posts.next}
+								next={() => fetchMoreData(posts, setPosts)}
+							>
+								children=
+								{posts.results.map((post) => (
 									<Post
 										key={post.id}
 										{...post}
 										setPosts={setPosts}
 									/>
 								))}
-								dataLength={posts.results.length}
-								loader={<Asset spinner />}
-								hasMore={!!posts.next}
-								next={() => fetchMoreData(posts, setPosts)}
-							/>
+							</InfiniteScroll>
 						) : (
 							<Container className={appStyles.Content}>
 								<Asset src={NoResults} message={message} />

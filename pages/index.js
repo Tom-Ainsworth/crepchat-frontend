@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 
 // Internal
 import styles from "../styles/App.module.css";
-import NavBar from "../components/NavBar";
 import "../src/api/axiosDefaults";
 import { useCurrentUser } from "../src/contexts/CurrentUserContext";
 import PostsPage from "../src/pages/posts/PostsPage";

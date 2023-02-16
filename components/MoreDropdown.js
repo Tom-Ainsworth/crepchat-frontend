@@ -1,4 +1,5 @@
 // External
+import { useRouter } from "next/router";
 import { forwardRef } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
@@ -47,7 +48,7 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
 };
 
 export function ProfileEditDropdown({ id }) {
-	const history = useHistory();
+	const router = useRouter();
 	return (
 		<Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
 			<Dropdown.Toggle as={ThreeDots} />
@@ -59,18 +60,14 @@ export function ProfileEditDropdown({ id }) {
 					<i className="fas fa-edit" /> edit profile
 				</Dropdown.Item>
 				<Dropdown.Item
-					onClick={() =>
-						history.push(`/profiles/${id}/edit/username`)
-					}
+					onClick={() => router.push(`/profiles/${id}/edit/username`)}
 					aria-label="edit-username"
 				>
 					<i className="far fa-id-card" />
 					change username
 				</Dropdown.Item>
 				<Dropdown.Item
-					onClick={() =>
-						history.push(`/profiles/${id}/edit/password`)
-					}
+					onClick={() => router.push(`/profiles/${id}/edit/password`)}
 					aria-label="edit-password"
 				>
 					<i className="fas fa-key" />
