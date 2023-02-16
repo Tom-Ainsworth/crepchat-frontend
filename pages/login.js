@@ -55,7 +55,7 @@ function LogInForm() {
 			setTokenTimestamp(data);
 		} catch (err) {
 			setErrors(err.response?.data);
-			// console.log(err);
+			console.log(err);
 		}
 	};
 
@@ -76,7 +76,7 @@ function LogInForm() {
 								onChange={handleChange}
 							/>
 						</Form.Group>
-						{errors?.username?.map((message, idx) => (
+						{errors.username?.map((message, idx) => (
 							<Alert variant="warning" key={idx}>
 								{message}
 							</Alert>
@@ -93,7 +93,7 @@ function LogInForm() {
 								onChange={handleChange}
 							/>
 						</Form.Group>
-						{errors?.password?.map((message, idx) => (
+						{errors.password?.map((message, idx) => (
 							<Alert variant="warning" key={idx}>
 								{message}
 							</Alert>
@@ -105,7 +105,7 @@ function LogInForm() {
 						>
 							Log In
 						</Button>
-						{errors?.non_field_errors?.map((message, idx) => (
+						{errors.non_field_errors?.map((message, idx) => (
 							<Alert key={idx} variant="warning" className="mt-3">
 								{message}
 							</Alert>

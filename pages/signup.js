@@ -14,9 +14,10 @@ import btnStyles from "../styles/Button.module.css";
 import appStyles from "../styles/App.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useRedirect } from "../src/hooks/useRedirect";
 
 const SignUpForm = () => {
-	// useRedirect("loggedIn");
+	useRedirect("loggedIn");
 
 	let router = useRouter();
 	const [signUpData, setSignUpData] = useState({

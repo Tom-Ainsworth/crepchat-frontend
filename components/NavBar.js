@@ -48,7 +48,7 @@ export default function NavBar() {
 			<Link href="/liked" className={styles.NavLink}>
 				<i className="fas fa-heart"></i> Liked
 			</Link>
-			<Link href="/" className={styles.NavLink}>
+			<Link href="/" className={styles.NavLink} onClick={handleLogout}>
 				<i className="fas fa-sign-out-alt"></i> Logout
 			</Link>
 			<Link

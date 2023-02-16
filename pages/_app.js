@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout";
+import { CurrentUserProvider } from "../src/contexts/CurrentUserContext";
+import { ProfileDataProvider } from "../src/contexts/ProfileDataContext";
 import "../styles/global.css";
 export default function App({ Component, pageProps }) {
 	return (
@@ -17,9 +19,13 @@ export default function App({ Component, pageProps }) {
 				/>
 				<title>Crep Chat</title>
 			</Head>
-			<Layout>
-				<Component {...pageProps} />;
-			</Layout>
+			<CurrentUserProvider>
+				<ProfileDataProvider>
+					<Layout>
+						<Component {...pageProps} />;
+					</Layout>
+				</ProfileDataProvider>
+			</CurrentUserProvider>
 		</>
 	);
 }
