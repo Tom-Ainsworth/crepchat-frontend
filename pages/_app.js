@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layout";
+import NavBar from "../components/NavBar";
 import { CurrentUserProvider } from "../src/contexts/CurrentUserContext";
 import { ProfileDataProvider } from "../src/contexts/ProfileDataContext";
 import "../styles/global.css";
@@ -21,8 +22,9 @@ export default function App({ Component, pageProps }) {
 			</Head>
 			<CurrentUserProvider>
 				<ProfileDataProvider>
+					<NavBar />
 					<Layout>
-						<Component {...pageProps} />;
+						<Component {...pageProps} />
 					</Layout>
 				</ProfileDataProvider>
 			</CurrentUserProvider>
