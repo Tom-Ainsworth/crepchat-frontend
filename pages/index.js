@@ -11,15 +11,10 @@ export default function Home() {
 	const currentUser = useCurrentUser();
 
 	return (
-		<div className={styles.App}>
-			<Container
-				className={
-					currentUser ? styles.MainLoggedIn : styles.MainLoggedOut
-				}
-			>
-				<PostsPage message="No results found. Adjust your search and try again." />
-
-				{/* 
+		<PostsPage message="No results found. Adjust your search and try again." />
+	);
+	{
+		/* 
 					<Route
 						exact
 						path="/posts/:id/edit"
@@ -50,8 +45,6 @@ export default function Home() {
 						path="/profiles/:id/edit"
 						render={() => <ProfileEditForm />}
 					/>
-					<Route render={() => <NotFound />} /> */}
-			</Container>
-		</div>
-	);
+					<Route render={() => <NotFound />} /> */
+	}
 }

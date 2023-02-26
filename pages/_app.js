@@ -22,7 +22,6 @@ export default function App({ Component, pageProps }) {
 			</Head>
 			<CurrentUserProvider>
 				<ProfileDataProvider>
-					<NavBar />
 					<Layout>
 						<Component {...pageProps} />
 					</Layout>
