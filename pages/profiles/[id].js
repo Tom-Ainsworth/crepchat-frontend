@@ -134,7 +134,6 @@ export default function ProfilePage() {
 					hasMore={!!profilePosts.next}
 					next={() => fetchMoreData(profilePosts, setProfilePosts)}
 				>
-					children=
 					{profilePosts.results.map((post) => (
 						<Post
 							key={post.id}

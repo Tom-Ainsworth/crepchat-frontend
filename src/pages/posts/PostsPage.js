@@ -90,7 +90,6 @@ function PostsPage({ message, filter = "" }) {
 								hasMore={!!posts.next}
 								next={() => fetchMoreData(posts, setPosts)}
 							>
-								children=
 								{posts.results.map((post) => (
 									<Post
 										key={post.id}

@@ -22,6 +22,7 @@ import { removeTokenTimestamp } from "../src/utils/utils";
 export default function NavBar() {
 	const currentUser = useCurrentUser();
 	const setCurrentUser = useSetCurrentUser();
+	console.log("current user: ", currentUser);
 
 	const { expanded, setExpanded, ref } = useClickOutside();
 
@@ -42,12 +43,12 @@ export default function NavBar() {
 
 	const loggedInIcons = (
 		<>
-			<Link href="/feed" className={styles.NavLink}>
+			{/* <Link href="/feed" className={styles.NavLink}>
 				<i className="fas fa-stream"></i> Feed
-			</Link>
-			<Link href="/liked" className={styles.NavLink}>
+			</Link> */}
+			{/* <Link href="/liked" className={styles.NavLink}>
 				<i className="fas fa-heart"></i> Liked
-			</Link>
+			</Link> */}
 			<Link href="/" className={styles.NavLink} onClick={handleLogout}>
 				<i className="fas fa-sign-out-alt"></i> Logout
 			</Link>
