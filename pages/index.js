@@ -1,15 +1,10 @@
-// External
-import Container from "react-bootstrap/Container";
-
 // Internal
-import styles from "../styles/App.module.css";
+
 import "../src/api/axiosDefaults";
-import { useCurrentUser } from "../src/contexts/CurrentUserContext";
+
 import PostsPage from "../src/pages/posts/PostsPage";
 
 export default function Home() {
-	const currentUser = useCurrentUser();
-
 	return (
 		<PostsPage message="No results found. Adjust your search and try again." />
 	);

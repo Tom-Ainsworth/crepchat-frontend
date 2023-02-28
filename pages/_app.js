@@ -1,14 +1,11 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-import NavBar from "../components/NavBar";
-import { CurrentUserProvider } from "../src/contexts/CurrentUserContext";
-import { ProfileDataProvider } from "../src/contexts/ProfileDataContext";
 import "../styles/global.css";
-export default function App({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<meta charset="utf-8" />
+				<meta charSet="utf-8" />
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
@@ -20,13 +17,10 @@ export default function App({ Component, pageProps }) {
 				/>
 				<title>Crep Chat</title>
 			</Head>
-			<CurrentUserProvider>
-				<ProfileDataProvider>
-					<Layout>
-						<Component {...pageProps} />
-					</Layout>
-				</ProfileDataProvider>
-			</CurrentUserProvider>
+
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
 		</>
 	);
 }
