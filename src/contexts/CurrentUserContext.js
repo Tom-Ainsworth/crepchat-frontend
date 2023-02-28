@@ -5,14 +5,17 @@ import axios from "axios";
 // Internal
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { removeTokenTimestamp, shouldRefreshToken } from "../utils/utils";
+import { useRouter } from "next/router";
 
 export const CurrentUserContext = createContext();
-export const setCurrentUserContext = createContext();
+export const SetCurrentUserContext = createContext();
 
 export const useCurrentUser = () => useContext(CurrentUserContext);
-export const useSetCurrentUser = () => useContext(setCurrentUserContext);
+export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 export const CurrentUserProvider = ({ children }) => {
 	const [currentUser, setCurrentUser] = useState(null);
+
+	const router = useRouter();
 
 	const handleMount = async () => {
 		try {
@@ -71,13 +74,13 @@ export const CurrentUserProvider = ({ children }) => {
 				return Promise.reject(err);
 			}
 		);
-	}, []);
+	}, [router]);
 
 	return (
 		<CurrentUserContext.Provider value={currentUser}>
-			<setCurrentUserContext.Provider value={setCurrentUser}>
+			<SetCurrentUserContext.Provider value={setCurrentUser}>
 				{children}
-			</setCurrentUserContext.Provider>
+			</SetCurrentUserContext.Provider>
 		</CurrentUserContext.Provider>
 	);
 };
