@@ -50,8 +50,8 @@ function LogInForm() {
 				"/dj-rest-auth/login/",
 				LogInData
 			);
-			router.back();
 			setCurrentUser(data.user);
+			router.back();
 			setTokenTimestamp(data);
 		} catch (err) {
 			setErrors(err.response?.data);
