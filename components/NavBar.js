@@ -46,9 +46,9 @@ export default function NavBar() {
 			<Link href="/feed" className={styles.NavLink}>
 				<i className="fas fa-stream"></i> Feed
 			</Link>
-			{/* <Link href="/liked" className={styles.NavLink}>
+			<Link href="/liked" className={styles.NavLink}>
 				<i className="fas fa-heart"></i> Liked
-			</Link> */}
+			</Link>
 			<Link href="/" className={styles.NavLink} onClick={handleLogout}>
 				<i className="fas fa-sign-out-alt"></i> Logout
 			</Link>
