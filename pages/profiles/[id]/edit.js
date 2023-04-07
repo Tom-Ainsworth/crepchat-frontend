@@ -106,7 +106,7 @@ const ProfileEditForm = () => {
             ))}
             <Button
                 className={`${btnStyles.Button} ${btnStyles.PurpleOutline}`}
-                onClick={() => history.goBack()}
+                onClick={() => router.back()}
             >
                 Cancel
             </Button>
