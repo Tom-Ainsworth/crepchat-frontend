@@ -1,6 +1,6 @@
 // External
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
@@ -9,16 +9,18 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-// Internal
-import { axiosRes } from "../../api/axiosDefaults";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { axiosRes } from "../../../../src/api/axiosDefaults";
+import {
+    useCurrentUser,
+    useSetCurrentUser,
+} from "../../../../src/contexts/CurrentUserContext";
 
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
+import btnStyles from "../../../../styles/Button.module.css";
+import appStyles from "../../../../styles/App.module.css";
 
 const UserPasswordForm = () => {
-    const history = useHistory();
-    const { id } = useParams();
+    const router = useRouter()
+    const { id } = router.query
     const currentUser = useCurrentUser();
 
     const [userData, setUserData] = useState({
@@ -39,15 +41,15 @@ const UserPasswordForm = () => {
     useEffect(() => {
         if (currentUser?.profile_id?.toString() !== id) {
             // redirect user if they are not the owner of this profile
-            history.push("/");
+            router.push("/");
         }
-    }, [currentUser, history, id]);
+    }, [currentUser, router, id]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             await axiosRes.post("/dj-rest-auth/password/change/", userData);
-            history.goBack();
+            router.back();
         } catch (err) {
             setErrors(err.response?.data);
         }
@@ -90,7 +92,7 @@ const UserPasswordForm = () => {
                         ))}
                         <Button
                             className={`${btnStyles.Button} ${btnStyles.PurpleOutline}`}
-                            onClick={() => history.goBack()}
+                            onClick={() => history.back()}
                         >
                             Cancel
                         </Button>
