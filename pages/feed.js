@@ -1,4 +1,4 @@
-import PostsPage from "../src/pages/posts/PostsPage";
+import PostsPage from '../components/posts/PostsPage'
 import { useCurrentUser } from "../src/contexts/CurrentUserContext";
 
 export default function Feed() {

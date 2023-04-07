@@ -22,7 +22,7 @@ import {
 	useProfileData,
 	useSetProfileData,
 } from "../../src/contexts/ProfileDataContext";
-import Post from "../../src/pages/posts/Post";
+import Post from "../../components/posts/Post";
 import { fetchMoreData } from "../../src/utils/utils";
 import NoResults from "../../public/no-results.jpeg";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";

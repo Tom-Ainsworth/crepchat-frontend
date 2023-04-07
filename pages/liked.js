@@ -1,5 +1,5 @@
 import { useCurrentUser } from "../src/contexts/CurrentUserContext";
-import PostsPage from '../src/pages/posts/PostsPage'
+import PostsPage from '../components/posts/PostsPage'
 
 
 export default function Liked() {

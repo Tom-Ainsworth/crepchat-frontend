@@ -2,7 +2,7 @@
 
 import "../src/api/axiosDefaults";
 
-import PostsPage from "../src/pages/posts/PostsPage";
+import PostsPage from "../components/posts/PostsPage";
 
 export default function Home() {
 	return (

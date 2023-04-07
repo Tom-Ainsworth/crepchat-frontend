@@ -6,11 +6,11 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
 // Internal
-import Avatar from "../../../components/Avatar";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import styles from "../../../styles/Post.module.css";
-import { axiosRes } from "../../api/axiosDefaults";
-import { MoreDropdown } from "../../../components/MoreDropdown";
+import Avatar from "../Avatar";
+import { useCurrentUser } from "../../src/contexts/CurrentUserContext";
+import styles from "../../styles/Post.module.css";
+import { axiosRes } from "../../src/api/axiosDefaults";
+import { MoreDropdown } from "../MoreDropdown";
 import Link from "next/link";
 
 const Post = (props) => {

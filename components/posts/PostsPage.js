@@ -8,16 +8,16 @@ import Container from "react-bootstrap/Container";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 // Internal
-import appStyles from "../../../styles/App.module.css";
-import styles from "../../../styles/PostsPage.module.css";
-import { axiosReq } from "../../api/axiosDefaults";
+import appStyles from "../../styles/App.module.css";
+import styles from "../../styles/PostsPage.module.css";
+import { axiosReq } from "../../src/api/axiosDefaults";
 import Post from "./Post";
-import NoResults from "../../../public/no-results.jpeg";
-import Asset from "../../../components/Asset";
-import { fetchMoreData } from "../../utils/utils";
-import PopularProfiles from "../../../components/PopularProfiles";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { useProfileData } from "../../contexts/ProfileDataContext";
+import NoResults from "../../public/no-results.jpeg";
+import Asset from "../Asset";
+import { fetchMoreData } from "../../src/utils/utils";
+import PopularProfiles from "../PopularProfiles";
+import { useCurrentUser } from "../../src/contexts/CurrentUserContext";
+import { useProfileData } from "../../src/contexts/ProfileDataContext";
 
 function PostsPage({ message, filter = "" }) {
 	const [posts, setPosts] = useState({ results: [] });
