@@ -54,7 +54,7 @@ export function ProfileEditDropdown({ id }) {
 			<Dropdown.Toggle as={ThreeDots} />
 			<Dropdown.Menu>
 				<Dropdown.Item
-					onClick={() => history.push(`/profiles/${id}/edit`)}
+					onClick={() => router.push(`/profiles/${id}/edit`)}
 					aria-label="edit-profile"
 				>
 					<i className="fas fa-edit" /> edit profile
