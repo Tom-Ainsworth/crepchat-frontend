@@ -1,6 +1,6 @@
 // External
 import { useEffect, useState } from "react";
-
+import { useRouter } from "next/router";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import Col from "react-bootstrap/Col";
@@ -26,7 +26,6 @@ import Post from "../../components/posts/Post";
 import { fetchMoreData } from "../../src/utils/utils";
 import NoResults from "../../public/no-results.jpeg";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
-import { useRouter } from "next/router";
 
 export default function ProfilePage() {
 	const [hasLoaded, setHasLoaded] = useState(false);

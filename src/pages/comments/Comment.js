@@ -1,14 +1,14 @@
 // External
 import { useState } from "react";
+import Link from "next/link";
 import Media from "react-bootstrap/Media";
-import { Link } from "react-router-dom";
-import { axiosRes } from "../../api/axiosDefaults";
-import Avatar from "../../components/Avatar";
-import { MoreDropdown } from "../../components/MoreDropdown";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 // Internal
-import styles from "../../styles/Comment.module.css";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Avatar from "../../../components/Avatar";
+import { MoreDropdown } from "../../../components/MoreDropdown";
+import { axiosRes } from "../../api/axiosDefaults";
+import styles from "../../../styles/Comment.module.css";
 import CommentEditForm from "./CommentEditForm";
 
 const Comment = (props) => {
@@ -55,7 +55,7 @@ const Comment = (props) => {
         <>
             <hr />
             <Media>
-                <Link to={`/profiles/${profile_id}`}>
+                <Link href={`/profiles/${profile_id}`}>
                     <Avatar src={profile_image} />
                 </Link>
                 <Media.Body className="align-self-center ml-2">

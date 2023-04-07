@@ -4,6 +4,8 @@ import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 // Internal
 import Avatar from "../Avatar";
@@ -11,7 +13,6 @@ import { useCurrentUser } from "../../src/contexts/CurrentUserContext";
 import styles from "../../styles/Post.module.css";
 import { axiosRes } from "../../src/api/axiosDefaults";
 import { MoreDropdown } from "../MoreDropdown";
-import Link from "next/link";
 
 const Post = (props) => {
 	const {
@@ -34,15 +35,17 @@ const Post = (props) => {
 
 	const currentUser = useCurrentUser();
 	const is_owner = currentUser?.username === owner;
+	
+	const router = useRouter();
 
 	const handleEdit = () => {
-		history.push(`/posts/${id}/edit`);
+		router.push(`/posts/${id}/edit`);
 	};
 
 	const handleDelete = async () => {
 		try {
 			await axiosRes.delete(`/posts/${id}/`);
-			history.goBack();
+			router.back();
 		} catch (err) {
 			// console.log(err)
 		}

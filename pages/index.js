@@ -15,11 +15,7 @@ export default function Home() {
 						path="/posts/:id/edit"
 						render={() => <PostEditForm />}
 					/>
-					<Route
-						exact
-						path="/posts/:id"
-						render={() => <PostPage />}
-					/>
+				
 					<Route
 						exact
 						path="/profiles/:id"

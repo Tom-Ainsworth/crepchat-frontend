@@ -1,28 +1,31 @@
 // External
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 // Internal
-import appStyles from "../../App.module.css";
-import { axiosReq } from "../../api/axiosDefaults";
-import Post from "./Post";
-import CommentCreateForm from "../comments/CommentCreateForm";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Comment from "../comments/Comment";
-import { fetchMoreData } from "../../utils/utils";
+import { axiosReq } from "../../src/api/axiosDefaults";
+import Post from "../../components/posts/Post";
+import CommentCreateForm from "../../src/pages/comments/CommentCreateForm";
+import { useCurrentUser } from "../../src/contexts/CurrentUserContext";
+import Comment from "../../src/pages/comments/Comment";
+import { fetchMoreData } from "../../src/utils/utils";
 import Asset from "../../components/Asset";
-import PopularProfiles from "../profiles/PopularProfiles";
+import PopularProfiles from "../../components/PopularProfiles";
 
-function PostPage() {
-	const { id } = useParams();
+import appStyles from "../../styles/App.module.css";
+
+export default function PostPage() {
+	const currentUser = useCurrentUser();
+
+    const router = useRouter()
+	const { id } = router.query;
 
 	const [post, setPost] = useState({ results: [] });
 
-	const currentUser = useCurrentUser();
 	const profile_image = currentUser?.profile_image;
 	const [comments, setComments] = useState({ results: [] });
 
@@ -91,5 +94,3 @@ function PostPage() {
 		</Row>
 	);
 }
-
-export default PostPage;
