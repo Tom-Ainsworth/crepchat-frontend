@@ -2,7 +2,7 @@
 
 Developer: Tom Ainsworth
 
-[Deployed Site](https://crepchat.onrender.com/)
+[Deployed Site](https://crepchat-frontend-tom-ainsworth.vercel.app/)
 
 This repository contains the frontend React app for the fullstack application Crep Chat - a content site for trainer enthusiasts to chat about their favourite pairs.
 Built using React.
