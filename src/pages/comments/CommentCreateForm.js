@@ -1,14 +1,15 @@
 // External
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 // Internal
-import styles from "../../styles/CommentCreateEditForm.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import Avatar from "../../components/Avatar";
+import Avatar from "../../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+
+import btnStyles from "../../../styles/Button.module.css";
+import styles from "../../../styles/CommentCreateEditForm.module.css";
 
 function CommentCreateForm(props) {
     const { post, setPost, setComments, profile_image, profile_id } = props;
@@ -47,7 +48,7 @@ function CommentCreateForm(props) {
         <Form className="mt-2" onSubmit={handleSubmit}>
             <Form.Group>
                 <InputGroup>
-                    <Link to={`/profiles/${profile_id}`}>
+                    <Link href={`/profiles/${profile_id}`}>
                         <Avatar src={profile_image} />
                     </Link>
                     <Form.Control

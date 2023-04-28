@@ -2,9 +2,12 @@
 .prettierrc
 
 # dependencies
+.next
 /node_modules
 /.pnp
 .pnp.js
+
+.vscode
 
 # testing
 /coverage
