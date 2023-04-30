@@ -1,6 +1,7 @@
 // External
 import { useEffect, useRef, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useRouter } from "next/router";
+
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -10,10 +11,10 @@ import Alert from "react-bootstrap/Alert";
 import Card from "react-bootstrap/Card";
 
 // Internal
-import styles from "../../styles/PostCreateEditForm.module.css";
-import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import { axiosReq } from "../../api/axiosDefaults";
+import styles from "../../../styles/PostCreateEditForm.module.css";
+import appStyles from "../../../styles/App.module.css";
+import btnStyles from "../../../styles/Button.module.css";
+import { axiosReq } from "../../../src/api/axiosDefaults";
 
 function PostEditForm() {
     const [postData, setPostData] = useState({
@@ -25,8 +26,8 @@ function PostEditForm() {
     const { caption, category, image } = postData;
 
     const imageInput = useRef(null);
-    const history = useHistory();
-    const { id } = useParams();
+    const router = useRouter();
+    const { id } = router.query;
 
     useEffect(() => {
         const handleMount = async () => {
@@ -43,7 +44,7 @@ function PostEditForm() {
         };
 
         handleMount();
-    }, [history, id]);
+    }, [router, id]);
 
     const [errors, setErrors] = useState({});
 
@@ -77,7 +78,7 @@ function PostEditForm() {
 
         try {
             await axiosReq.put(`/posts/${id}/`, formData);
-            history.push(`/posts/${id}`);
+            router.push(`/posts/${id}`);
         } catch (err) {
             // console.log(err);
             if (err.response?.status !== 401) {
@@ -119,7 +120,7 @@ function PostEditForm() {
                 </Form.Control>
             </Form.Group>
 
-            {errors.category?.map((message, idx) => (
+            {errors?.category?.map((message, idx) => (
                 <Alert variant="warning" key={idx}>
                     {message}
                 </Alert>
@@ -127,7 +128,7 @@ function PostEditForm() {
 
             <Button
                 className={`${btnStyles.Button} ${btnStyles.Purple} btn`}
-                onClick={() => history.goBack()}
+                onClick={() => router.back()}
             >
                 Cancel
             </Button>
@@ -171,7 +172,7 @@ function PostEditForm() {
                                 ref={imageInput}
                             />
 
-                            {errors.image?.map((message, idx) => (
+                            {errors?.image?.map((message, idx) => (
                                 <Alert variant="warning" key={idx}>
                                     {message}
                                 </Alert>
