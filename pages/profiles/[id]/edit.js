@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
+import Image from "next/image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -24,7 +24,7 @@ const ProfileEditForm = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
     const router = useRouter();
-    const { id } = router.query
+    const { id } = router.query;
 
     const imageFile = useRef();
 
@@ -127,7 +127,12 @@ const ProfileEditForm = () => {
                         <Form.Group>
                             {image && (
                                 <figure>
-                                    <Image src={image} alt={`${name}'s profile picture`} fluid roundedCircle />
+                                    <Image
+                                        src={image}
+                                        alt={`${name}'s profile picture`}
+                                        fluid
+                                        roundedCircle
+                                    />
                                 </figure>
                             )}
                             {errors?.image?.map((message, idx) => (
