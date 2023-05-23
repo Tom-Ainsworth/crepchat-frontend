@@ -22,7 +22,6 @@ import { removeTokenTimestamp } from "../src/utils/utils";
 export default function NavBar() {
 	const currentUser = useCurrentUser();
 	const setCurrentUser = useSetCurrentUser();
-	// console.log("current user: ", currentUser);
 
 	const { expanded, setExpanded, ref } = useClickOutside();
 
@@ -54,8 +53,7 @@ export default function NavBar() {
 			</Link>
 			<Link
 				href={`/profiles/${currentUser?.profile_id}`}
-				className={styles.NavLink}
-			>
+				className={styles.NavLink}>
 				<Avatar
 					src={currentUser?.profile_image}
 					height={40}
@@ -80,8 +78,7 @@ export default function NavBar() {
 			expanded={expanded}
 			className={styles.NavBar}
 			expand="md"
-			fixed="top"
-		>
+			fixed="top">
 			<Container className={styles.Container}>
 				<Link href="/">
 					<Navbar.Brand>
