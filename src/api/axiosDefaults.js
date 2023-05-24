@@ -1,9 +1,6 @@
 // External
 import axios from "axios";
 
-// UNCOMMENT WHEN DEPLOYING
-axios.defaults.baseURL = "https://crepchat-api.onrender.com/";
-
 // Railway URL
 axios.defaults.baseURL = "https://crepchat-api.up.railway.app/";
 
