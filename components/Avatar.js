@@ -11,6 +11,7 @@ const Avatar = ({ src, height = 45, text }) => {
 				height={height}
 				width={height}
 				alt="avatar"
+				unoptimized
 			/>
 			{text}
 		</span>
